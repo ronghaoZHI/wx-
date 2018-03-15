@@ -1,0 +1,105 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class='page_hd'>
+    <view class='section_tab clearfix'>
+      <navigator url='../publish_1/publish_1' class='active' hover-stay-time='{{navigator_time}}' open-type='redirectTo'>
+        需求方
+      </navigator>
+      <navigator url='../publish_2/publish_2' hover-stay-time='{{navigator_time}}' open-type='redirectTo'>
+        供应方
+      </navigator>
+    </view>
+
+    <view class='section_form'>
+      <form>
+
+        <!-- 文本框 -->
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell">
+            <view class="weui-cell__bd">
+              <textarea placeholder='请输入要发布的内容'></textarea>
+            </view>
+          </view>
+        </view>
+
+        <!-- 图片 -->
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell">
+            <view class="weui-cell__bd">
+              <view class="weui-uploader">
+                <view class="weui-uploader__hd">
+                  <view class="weui-uploader__title">图片上传</view>
+                  <view class="weui-uploader__info">{{files.length}}/2</view>
+                </view>
+                <view class="weui-uploader__bd">
+                  <view class="weui-uploader__files" id="uploaderFiles">
+                    <block wx:for-items="{{files}}" wx:key="{{index}}">
+                      <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                        <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                      </view>
+                    </block>
+                  </view>
+                  <view class="weui-uploader__input-box">
+                    <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <!-- 电话和地址 -->
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell">
+            <view class="weui-cell__hd">
+              <image src="../../../images/discovery_publish_address.png" mode='widthFix'></image>
+            </view>
+            <view class="weui-cell__bd">
+              <input placeholder='北京市朝阳区大鲁店'></input>
+            </view>
+          </view>
+          <view class="weui-cell">
+            <view class="weui-cell__hd">
+              <image src="../../../images/discovery_publish_name.png" mode='widthFix'></image>
+            </view>
+            <view class="weui-cell__bd">
+              <input placeholder='135585224888'></input>
+            </view>
+          </view>
+        </view>
+
+        <!-- 置顶 
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell">
+            <view class="weui-cell__bd">我要置顶</view>
+            <view class="weui-cell__ft">
+              <switch bindchange="bind_switch" />
+            </view>
+          </view>
+          <view class="{{switch_var==true?'show':'hidden'}}">
+            <view class="weui-cell">
+              <view class="weui-cell__bd">
+                选择置顶时间
+              </view>
+              <view class="weui-cell__ft">
+                <picker bindchange="bindDay" value="{{dayIndex}}" range="{{day}}">
+                  <view class="weui-select">{{day[dayIndex]}}天</view>
+                </picker>
+              </view>
+            </view>
+            <view class="weui-cell money">
+              <view class="weui-cell__bd">
+                价格
+              </view>
+              <view class="weui-cell__ft">￥{{money[dayIndex]}}</view>
+            </view>
+          </view>
+        </view>-->
+
+        <view class='btn_wrap'>
+          <button class="weui-btn" type="primary">立即发布</button>
+        </view>
+
+      </form>
+    </view>
+  </view>
+</view>

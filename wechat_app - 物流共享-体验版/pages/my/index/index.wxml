@@ -1,0 +1,143 @@
+<!--pages/blank/blank.wxml-->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class='page_hd'>
+
+    <!-- 个人信息 -->
+    <view class='section_userinfo'>
+      <image class='bg' src='../../../images/my_index_bg.png' mode='widthFix'></image>
+      <view class='content'>
+        <view class='img_wrap'>
+          <image src='{{userInfoAvatar}}'></image>
+        </view>
+        <text>{{nickName}}</text>
+      </view>
+    </view>
+
+    <!-- 列表 -->
+    <view class='section_list'>
+      <view class="weui-cells weui-cells_after-title">
+        <navigator url="../publish/publish" class="weui-cell weui-cell_access" hover-class='none' hover-stay-time='{{navigator_time}}'>
+          <view class="weui-cell__hd">
+            <image src="../../../images/my_index_icon_1.png" mode='widthFix'></image>
+          </view>
+          <view class="weui-cell__bd">发布信息</view>
+        </navigator>
+        <navigator url="../info_publish/info_publish" class="weui-cell weui-cell_access" hover-class='none' hover-stay-time='{{navigator_time}}'>
+          <view class="weui-cell__hd">
+            <image src="../../../images/my_index_icon_2.png" mode='widthFix'></image>
+          </view>
+          <view class="weui-cell__bd">我的信息</view>
+        </navigator>
+      </view>
+      <view class="weui-cells weui-cells_after-title">
+        <navigator url="../enter-system/enter-system" class="weui-cell weui-cell_access" hover-class='none' hover-stay-time='{{navigator_time}}'>
+          <view class="weui-cell__hd">
+            <image src="../../../images/my_index_icon_3.png" mode='widthFix'></image>
+          </view>
+          <view class="weui-cell__bd">后台入驻管理系统</view>
+        </navigator>
+        <navigator url="../card-system/card-system" class="weui-cell weui-cell_access" hover-class='none' hover-stay-time='{{navigator_time}}'>
+          <view class="weui-cell__hd">
+            <image src="../../../images/my_index_icon_5.png" mode='widthFix'></image>
+          </view>
+          <view class="weui-cell__bd">后台名片管理系统</view>
+        </navigator>
+        <navigator url="../simple_content/simple_content" class="weui-cell weui-cell_access" hover-class='none' hover-stay-time='{{navigator_time}}'>
+          <view class="weui-cell__hd">
+            <image src="../../../images/my_index_icon_4.png" mode='widthFix'></image>
+          </view>
+          <view class="weui-cell__bd">我的99元名片</view>
+        </navigator>
+        <navigator url="../update_content/update_content" class="weui-cell weui-cell_access" hover-class='none' hover-stay-time='{{navigator_time}}'>
+          <view class="weui-cell__hd">
+            <image src="../../../images/my_index_icon_4.png" mode='widthFix'></image>
+          </view>
+          <view class="weui-cell__bd">我的168元名片</view>
+        </navigator>
+        <navigator url="../update69_content/update69_content" class="weui-cell weui-cell_access" hover-class='none' hover-stay-time='{{navigator_time}}'>
+          <view class="weui-cell__hd">
+            <image src="../../../images/my_index_icon_4.png" mode='widthFix'></image>
+          </view>
+          <view class="weui-cell__bd">我的99元升级名片</view>
+        </navigator>
+        <navigator url="../order_waiting_168/order_waiting_168" class="weui-cell weui-cell_access" hover-class='none' hover-stay-time='{{navigator_time}}'>
+          <view class="weui-cell__hd">
+            <image src="../../../images/my_index_icon_4.png" mode='widthFix'></image>
+          </view>
+          <view class="weui-cell__bd">我的订单</view>
+        </navigator>        
+        <navigator url="../interest/interest" class="weui-cell weui-cell_access" hover-class='none' hover-stay-time='{{navigator_time}}'>
+          <view class="weui-cell__hd">
+            <image src="../../../images/my_index_icon_5.png" mode='widthFix'></image>
+          </view>
+          <view class="weui-cell__bd">我的收藏</view>
+        </navigator>
+      </view>
+
+      <view class="weui-cells weui-cells_after-title">
+        <navigator url="../about/about" class="weui-cell weui-cell_access" hover-class='none' hover-stay-time='{{navigator_time}}'>
+          <view class="weui-cell__hd">
+            <image src="../../../images/my_index_icon_6.png" mode='widthFix'></image>
+          </view>
+          <view class="weui-cell__bd">关于我们</view>
+        </navigator>
+        <view class="weui-cell weui-cell_access " hover-class='none' hover-stay-time='{{navigator_time}}'>
+          <view class="weui-cell__hd">
+            <image src="../../../images/my_index_icon_7.png" mode='widthFix'></image>
+          </view>
+          <view class="weui-cell__bd">联系客服</view>
+          <view class='contact_wrap'>
+            <contact-button type="default-dark" size="27" session-from="weapp">
+            </contact-button>
+            <contact-button type="default-dark" size="27" session-from="weapp">
+            </contact-button>
+            <contact-button type="default-dark" size="27" session-from="weapp">
+            </contact-button>
+            <contact-button type="default-dark" size="27" session-from="weapp">
+            </contact-button>
+            <contact-button type="default-dark" size="27" session-from="weapp">
+            </contact-button>
+            <contact-button type="default-dark" size="27" session-from="weapp">
+            </contact-button>
+            <contact-button type="default-dark" size="27" session-from="weapp">
+            </contact-button>
+            <contact-button type="default-dark" size="27" session-from="weapp">
+            </contact-button>
+            <contact-button type="default-dark" size="27" session-from="weapp">
+            </contact-button>
+            <contact-button type="default-dark" size="27" session-from="weapp">
+            </contact-button>
+            <contact-button type="default-dark" size="27" session-from="weapp">
+            </contact-button>
+            <contact-button type="default-dark" size="27" session-from="weapp">
+            </contact-button>
+            <contact-button type="default-dark" size="27" session-from="weapp">
+            </contact-button>
+            <contact-button type="default-dark" size="27" session-from="weapp">
+            </contact-button>
+          </view>
+        </view>
+        <navigator url="../advice/advice" class="weui-cell weui-cell_access" hover-class='none' hover-stay-time='{{navigator_time}}'>
+          <view class="weui-cell__hd">
+            <image src="../../../images/my_index_icon_8.png" mode='widthFix'></image>
+          </view>
+          <view class="weui-cell__bd">投诉或建议</view>
+        </navigator>
+      </view>
+    </view>
+
+    <!-- 遮罩层 -->
+    <view class='mask {{mask?"active":""}}' bindtap='bind_popup_close'></view>
+
+    <!-- 弹窗-->
+    <view class='section_popup'>
+      <!--发票 -->
+      <view class='popup popup_img {{popup_img?"active":""}}' bindtap='bind_popup_close'>
+        <image class='bg' src='../../../images/my_index_popup.png' mode='widthFix'></image>
+        <navigator class='btn' url="../publish/publish" hover-class='none' hover-stay-time='{{navigator_time}}'>
+          <image src='../../../images/my_index_popup_btn.png' mode='widthFix'></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

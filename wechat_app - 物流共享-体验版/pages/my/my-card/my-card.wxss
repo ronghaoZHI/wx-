@@ -1,0 +1,11 @@
+/* pages/my/my-card/my-card.wxss */
+.section_tab>navigator{
+  width:33%;
+}
+@import '../../e-card/update_content/update_content';
+page{
+  overflow-y: hidden;
+}
+.page{
+  padding-top:0;
+}

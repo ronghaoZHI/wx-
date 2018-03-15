@@ -1,0 +1,17 @@
+<!--pages/blank/blank.wxml-->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <image class='bg' src='../../../images/change_card_bg.png' mode='aspectFill'></image>
+  <view class='page_bd'>
+    <view class='section_content'>
+      <image class='logo' src='../../../images/change_card_logo.png' mode='widthFix'></image>
+      <view class='title'>
+        物流共享
+      </view>
+      <text><text class='color'>物流共享</text>提醒您\n提倡环保，节约用纸！请使用电子名片</text>
+    </view>
+    <view class='section_btn'>      
+      <navigator url='../../e-card/card_make/card_make' class="btn" hover-stay-time='{{navigator_time}}'>我的定制名片</navigator>
+      <navigator url='../../e-card/cards/cards' class="btn"  hover-stay-time='{{navigator_time}}'>名片集</navigator>
+    </view>
+  </view>  
+</view>

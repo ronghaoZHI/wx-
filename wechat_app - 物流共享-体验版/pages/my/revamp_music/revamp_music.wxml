@@ -1,0 +1,40 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+
+    <!-- tab选项卡 -->
+    <view class='section_tab style1'>
+      <view class='tab_hd'>
+        <navigator url="../revamp_card_168/revamp_card_168" class='tab_hd_item ' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          修改名片
+        </navigator>
+        <navigator url="" class='tab_hd_item active' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          修改音乐
+        </navigator>
+      </view>
+    </view>
+
+    <!-- 表单 -->
+    <form>
+    
+        <view class="weui-cells weui-cells_after-title">
+            <radio-group bindchange="radioChange">
+                <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="{{item.value}}">
+                    <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+
+                    <view class="weui-cell__bd">{{item.name}}</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+                        <icon color='#144fe3' class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+                    </view>
+                </label>
+            </radio-group>
+        </view>
+
+      <view class='col-12 btn_wrap'>
+        <button class='btn' form-type='submit'>确认修改</button>
+      </view>
+
+    </form>
+
+    
+  </view>
+</view>

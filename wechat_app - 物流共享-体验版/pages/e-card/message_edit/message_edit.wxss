@@ -1,0 +1,54 @@
+@import '../../e-card/message/message';
+.weui-cells{
+  height: 236rpx;
+  overflow: auto
+}
+.section_message{
+  margin: 50rpx 20rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  overflow: hidden
+}
+.section_message .title{
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #144fe3;
+  color: #fff;
+  font-size: 36rpx;
+  text-align: center;
+}
+.section_message form{
+  display: block;
+  padding: 25rpx 55rpx;
+}
+.section_message form view{
+margin-top: 20rpx;
+}
+.section_message form view input,
+.section_message form view textarea{
+  display: block;
+  border: 1px solid #e5e5e5;
+  width: 100%;
+  height: 60rpx;
+  box-sizing: border-box;
+  padding-left: 35rpx;
+  padding-right: 35rpx;
+}
+.section_message form view textarea{
+  height: 255rpx;
+  padding: 20rpx 35rpx
+}
+.section_message .tips{
+  color: #999;
+  margin-top: 10rpx;
+  text-align: center;
+}
+.section_message button{
+  margin-top: 70rpx;
+  line-height: 65rpx;
+  height: 65rpx;
+  width: 300rpx;
+  font-size: 36rpx;
+  color: #fff;
+    background: #144fe3;
+}

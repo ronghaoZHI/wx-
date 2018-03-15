@@ -1,0 +1,63 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <!-- 表单 -->
+
+    <view class="weui-cell weui-cell_switch">
+      <view class="weui-cell__bd title">留言板</view>
+      <view class="weui-cell__ft">
+       
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <navigator url="" class="weui-cell weui-cell_access" hover-class='none' hover-stay-time='{{navigator_time}}'>
+        <view class="weui-cell__hd">
+          <image src='../../../images/test_publish_new.png' mode='widthFix'></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view class='name'>王小姐</view>
+          <view class='text ellipsis'>留言文字留言文字留言文字留言文字留言文字留言文字留言文字留言文字留言文字</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class='none' hover-stay-time='{{navigator_time}}'>
+        <view class="weui-cell__hd">
+          <image src='../../../images/test_publish_new.png' mode='widthFix'></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view class='name'>王小姐</view>
+          <view class='text ellipsis'>留言文字留言文字留言文字</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class='none' hover-stay-time='{{navigator_time}}'>
+        <view class="weui-cell__hd">
+          <image src='../../../images/test_publish_new.png' mode='widthFix'></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view class='name'>王小姐</view>
+          <view class='text ellipsis'>留言文字留言文字留言文字</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+
+    <view class='section_message'>
+      <view class='title'>
+        留言咨询
+      </view>
+      <form>
+        <view>
+          <input placeholder='请输入姓名'></input>
+        </view>
+        <view>
+          <input placeholder='请输入联系电话' bindblur='bind_validatemobile'></input>
+        </view>
+        <view>
+          <textarea placeholder='请输入内容（最多不得超过500个字符）' maxlength='500'></textarea>
+        </view>
+        <view class='tips'>请留下您的联系方式以便及时回答您的问题</view>
+        <button>提交</button>
+      </form>
+    </view>
+  </view>
+</view>

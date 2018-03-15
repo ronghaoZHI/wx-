@@ -1,0 +1,30 @@
+.section_tab {
+  margin: 20rpx;
+  color: #333333;
+}
+
+.section_tab>navigator {
+  border: none;
+}
+
+.section_tab>navigator.active {
+  color: #666;
+  border: none;
+  background: #ececec;
+}
+.section_text{
+  margin: 40rpx;
+  font-size: 28rpx;
+}
+.section_text{
+  color: #666;
+}
+.section_text text{
+  display: block
+}
+.section_text .color{
+  color: #333333;
+}
+.section_text .p{
+  margin-bottom: 40rpx;
+}

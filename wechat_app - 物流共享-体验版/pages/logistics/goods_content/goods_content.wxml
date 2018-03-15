@@ -1,0 +1,58 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+
+    <view class='section_table'>
+      <view class='table'>
+        <view class='tr'>
+          <view class='td'>
+            信息编号
+          </view>
+          <view class='td'>
+            <text>{{goods_id?goods_id:"123456789"}}</text>
+          </view>
+        </view>
+        <view class='tr'>
+          <view class='td'>
+            发布时间
+          </view>
+          <view class='td'>
+            <text>{{addtime?addtime:"2017-10-01 12：45"}}</text>
+            <!-- <text>12：45</text> -->
+          </view>
+        </view>
+        <view class='tr'>
+          <view class='td'>
+            信息详情
+          </view>
+          <view class='td'>
+            <text>车长:{{carLong_d}}  货型:{{goodsClass_d}}  货量单位:{{unitsNum_d}}  车型:{{carClass_d}}  发布备注:{{info_d}}</text>
+          </view>
+        </view>
+        <view class='tr'>
+          <view class='td'>
+            发布人
+          </view>
+          <view class='td'>
+            <text>{{person? person: "王先生"}}</text>
+            <!-- <text>（北京）</text> -->
+          </view>
+        </view>
+        <view class='tr'>
+          <view class='td'>
+            联系电话
+          </view>
+          <view class='td'>
+            <text class='phone' bindtap='bindPhone' data-phone='{{phone?phone:"13888888888"}}'>{{phone?phone:"13888888888"}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 发布 -->
+    <navigator class='scrollTop' hover-stay-time='{{navigator_time}}'>
+      <image src='../../../images/publish.png' mode='widthFix'></image>
+    </navigator>
+
+
+  </view>
+</view>

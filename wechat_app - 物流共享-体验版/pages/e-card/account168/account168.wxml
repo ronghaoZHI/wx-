@@ -1,0 +1,33 @@
+<!--pages/e-card/account168/account168.wxml-->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class='page_hd'>
+    <!-- 选项卡 -->
+    <view class='section_tab style1'>     
+      <!-- 内容 -->
+      <view class='tab_bd'>
+        <!-- 最新发布 -->
+        <view class="ul">
+          <view class='li'>
+            <view class='li_hd'>
+               <view class='li_hd_hd'>
+                订单编号：<text>115126817044924243</text>
+              </view>
+            </view>
+            <view class='li_bd'>
+              <view class='li_bd_hd'>
+                <image src='../../../images/e-card_make_simple.png'></image>
+              </view>
+              <view class='li_bd_bd'>
+                <view>智能升级版电子名片
+                  <text>￥</text>
+                  <text class='num'>168</text>
+                </view>
+                <button bindtap="payOrder">微信支付</button>
+              </view>              
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

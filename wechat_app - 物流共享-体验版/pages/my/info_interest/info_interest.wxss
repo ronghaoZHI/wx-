@@ -1,0 +1,8 @@
+
+
+/* 选项卡 */
+/* 选项卡-头部 */
+.section_tab.style1 .tab_hd{
+  font-size: 30rpx;
+}
+/* 选项卡-内容 */

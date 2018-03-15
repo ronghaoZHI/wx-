@@ -1,0 +1,18 @@
+@import '../card/card.wxss';
+.section_content{
+  text-align: left;
+  padding: 70rpx 60rpx;
+  position: relative
+}
+.section_content .name{
+  font-size: 48rpx;
+  position: absolute;
+  bottom: 0;
+  left: 60rpx;
+}
+navigator image{
+  width: 41rpx;
+  vertical-align: middle;
+  margin-right: 30rpx;
+  margin-top: -2rpx;
+}

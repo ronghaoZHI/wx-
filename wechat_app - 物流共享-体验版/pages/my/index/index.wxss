@@ -1,0 +1,90 @@
+/* 用户信息 */
+.section_userinfo {
+  position: relative;
+}
+.section_userinfo .bg{
+  display: block;
+  width: 100%;
+}
+.section_userinfo .content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.section_userinfo .content .img_wrap{
+   border: 1px solid #fff; 
+  border-radius: 50%;
+  overflow: hidden;
+}
+.section_userinfo .content image{
+  display: block;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%
+}
+.section_userinfo .content text{
+  display: block;
+  text-align: center;
+  margin-top: 20rpx;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 1;
+}
+
+/* 列表 */
+.section_list .weui-cells{
+  margin-top: 20rpx;
+}
+.section_list .weui-cells .weui-cell__hd{
+  width: 45rpx;
+  margin-right: 25rpx;
+}
+.section_list .weui-cells .weui-cell__hd image{
+  display: block;
+  width: 100%;
+}
+.section_list .weui-cells  .weui-cell__bd{
+  font-size: 30rpx;
+  color: #333;
+}
+
+.section_list .weui-cells::after,
+.section_list .weui-cells::before{
+  display: none;
+}
+.section_list .weui-cell{
+  padding: 0 25rpx;
+  height: 90rpx;
+}
+.section_list .weui-cell:before{
+  left: 95rpx;
+  border-color: #e5e5e5;
+}
+
+/* 客服 */
+.contact_wrap{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  height:27px;
+  overflow: hidden;
+
+}
+
+/* 弹窗 */
+.section_popup .popup_img .bg{
+  width: 420rpx;
+  margin: auto;
+}
+.section_popup .popup_img .btn{
+  width: 119rpx;
+  position: absolute;
+  bottom: 40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+}

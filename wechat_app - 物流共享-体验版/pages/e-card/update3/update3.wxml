@@ -1,0 +1,22 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <!-- 表单 -->
+    <form>
+      <view class='step'>
+        <image src='../../../images/e-card_update3_step.png' mode='widthFix'></image>
+      </view>
+
+      <view class='upgrade'>
+        <image src='../../../images/e-card_update_succeed.png' mode='widthFix'></image>
+        <view class='text'>恭喜您的名片已升级成功，快把这份尊享分享给更多人吧</view>
+        <view class='col-12 btn_wrap'>
+          <navigator url='../update_content/update_content' class='btn' hover-class='none' hover-stay-time='{{navigator_time}}'>我的定制名片</navigator>
+        </view>
+      </view>
+    </form>
+
+
+
+
+  </view>
+</view>

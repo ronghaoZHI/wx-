@@ -1,0 +1,34 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+
+    <!-- tab选项卡 -->
+    <view class='section_tab style1'>
+      <view class='tab_hd'>
+        <navigator url=" " class='tab_hd_item active' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          企业汇
+        </navigator>
+
+        <navigator url="../cards/cards" class='tab_hd_item ' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          名片夹
+        </navigator>
+      </view>
+    </view>
+    <view class='section_interest'>
+      <navigator url="" class='item' open-type='redirectTo' hover-class='none' hover-stay-time='{{navigator_time}}'>
+        <image src='../../../images/test_header.png'></image>
+        <text>富华钢结构
+            李先生</text>
+      </navigator>
+      <navigator url="" class='item' open-type='redirectTo' hover-class='none' hover-stay-time='{{navigator_time}}'>
+        <image src='../../../images/test_header.png'></image>
+        <text>绿色建材
+            王经理</text>
+      </navigator>
+      <navigator url="" class='item' open-type='redirectTo' hover-class='none' hover-stay-time='{{navigator_time}}'>
+        <image src='../../../images/test_header.png'></image>
+        <text>中国铜材
+            王经理</text>
+      </navigator>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,229 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <!-- 表单 -->
+    <form bindsubmit="formSubmit">
+      <view class='step'>
+        <image src='../../../images/e-card_upgrade1_step.png' mode='widthFix'></image>
+      </view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">Q Q:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入您的QQ号" placeholder-class='placeholder' name='qq' bindblur='bind_isQQ' />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">邮箱:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name='email' placeholder="请输入您的邮箱" placeholder-class='placeholder' bindblur='bind_isEmail' />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">公司电话:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" nama='company_phone' placeholder="请输入公司电话" placeholder-class='placeholder' bindblur='bind_checkTel' />
+          </view>
+        </view>
+        <view class='title'>个人风采：</view>
+        <view class='title_info'>个人介绍:</view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode textarea_wrap title_item">
+          <view class="weui-cell__bd">
+            <textarea placeholder='请填写您的个人介绍' placeholder-class='placeholder' name='person_intrduct'></textarea>
+          </view>
+        </view>
+        <view class='title_info'>个人业绩:</view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode textarea_wrap title_item">
+          <view class="weui-cell__bd">
+            <textarea placeholder='请填写您的个人业绩信息' placeholder-class='placeholder' name='person_yeji'></textarea>
+          </view>
+        </view>
+        <view class="weui-cell uploader_wrap">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for-items="{{files_mygrade}}" wx:key="{{index}}">
+                    <view class="weui-uploader__file" data-index='{{index}}' id="{{item}}">
+                      <image class='close' src='../../../images/icon_close.png' mode='widthFix' bindtap="bind_deleteImg_mygrade" data-index='{{index}}'></image>
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                    </view>
+                  </block>
+                  <!-- <view class="weui-uploader__file">
+                    <image class="weui-uploader__img" src="../../../images/discovery_index_img3.png" mode="aspectFill" />
+                  </view> -->
+                </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage_mygrade"></view>
+                </view>
+                <view class="weui-cells__tips {{tips_mygrade}}">
+                  <text>上传图片为个人业绩照片，至少上传9张，支持jpg、gif、png格式图片。图片尺寸812×508，请确保图片的真实性</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='title_info'>团队合作:</view>
+        <view class="weui-cell uploader_wrap title_item">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for-items="{{files_team}}" wx:key="{{index}}">
+                    <view class="weui-uploader__file" data-index='{{index}}' id="{{item}}">
+                      <image class='close' src='../../../images/icon_close.png' mode='widthFix' bindtap="bind_deleteImg_team" data-index='{{index}}'></image>
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                    </view>
+                  </block>
+                  <!-- <view class="weui-uploader__file">
+                    <image class="weui-uploader__img" src="../../../images/discovery_index_img3.png" mode="aspectFill" />
+                  </view> -->
+                </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage_team"></view>
+                </view>
+                <view class="weui-cells__tips {{tips_team}}">
+                  <text>上传图片为团队合作照片，至少上传1张，支持jpg、gif、png格式图片。图片尺寸90×150，请确保图片的真实性</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='title_info'>公司活动:</view>
+        <view class="weui-cell uploader_wrap title_item">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for-items="{{files_activity}}" wx:key="{{index}}">
+                    <view class="weui-uploader__file" data-index='{{index}}' id="{{item}}">
+                      <image class='close' src='../../../images/icon_close.png' mode='widthFix' bindtap="bind_deleteImg_activity" data-index='{{index}}'></image>
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                    </view>
+                  </block>
+                  <!-- <view class="weui-uploader__file">
+                    <image class="weui-uploader__img" src="../../../images/discovery_index_img3.png" mode="aspectFill" />
+                  </view> -->
+                </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage_activity"></view>
+                </view>
+                <view class="weui-cells__tips {{tips_activity}}">
+                  <text>上传图片为公司活动照片，至少上传1张，支持jpg、gif、png格式图片。图片尺寸90×150，请确保图片的真实性</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='title'>产品展示：</view>
+        <view class='title_info'>
+          <text>产品介绍及使用说明：</text>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode textarea_wrap title_item">
+          <view class="weui-cell__bd">
+            <textarea placeholder='请填写您的产品介绍及使用说明信息' placeholder-class='placeholder' name='product'></textarea>
+          </view>
+        </view>
+        <view class="weui-cell uploader_wrap title_item">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for-items="{{files_show}}" wx:key="{{index}}">
+                    <view class="weui-uploader__file" data-index='{{index}}' id="{{item}}">
+                      <image class='close' src='../../../images/icon_close.png' mode='widthFix' bindtap="bind_deleteImg_show" data-index='{{index}}'></image>
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                    </view>
+                  </block>
+                  <!-- <view class="weui-uploader__file">
+                    <image class="weui-uploader__img" src="../../../images/discovery_index_img3.png" mode="aspectFill" />
+                  </view> -->
+                </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage_show"></view>
+                </view>
+                <view class="weui-cells__tips {{tips_show}}">
+                  <text>上传图片为产品照片，至少上传1张，支持jpg、gif、png格式图片。图片尺寸90×150，请确保图片的真实性</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='title_info'>
+          发票开票信息
+          <text bindtap='bind_popup_img'>(发票示意图)</text>
+        </view>
+        <view class="weui-cell uploader_wrap title_item">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for-items="{{files_bill}}" wx:key="{{index}}">
+                    <view class="weui-uploader__file" data-index='{{index}}' id="{{item}}">
+                      <image class='close' src='../../../images/icon_close.png' mode='widthFix' bindtap="bind_deleteImg_bill" data-index='{{index}}'></image>
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                    </view>
+                  </block>
+                  <!-- <view class="weui-uploader__file">
+                    <image class="weui-uploader__img" src="../../../images/discovery_index_img3.png" mode="aspectFill" />
+                  </view> -->
+                </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage_bill"></view>
+                </view>
+                <view class="weui-cells__tips {{tipsbill}}">
+                  <text>上传图片为发票照片，至少上传1张，支持jpg、gif、png格式图片。图片尺寸90×150，请确保图片的真实性</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="weui-cell">
+          <view class="weui-cell__bd">是否展示</view>
+          <view class="weui-cell__ft">
+            <switch bindchange="bind_switch" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_checkbox weui-cell_vcode">
+          <checkbox-group>
+            <label>
+              <checkbox color='#ff7e00' checked='checked'></checkbox>我已阅读并同意
+              <text bindtap='bind_popup_book'>《使用同意书》</text>
+            </label>
+          </checkbox-group>
+        </view>
+      </view>
+      <view class='col-12 btn_wrap'>
+        <button class='btn' form-type='submit'>提交</button>
+      </view>
+    </form>
+
+    <!-- 遮罩层 -->
+    <view class='mask {{mask?"active":""}}' bindtap='bind_popup_close'></view>
+
+    <!-- 弹窗-->
+    <view class='section_popup'>
+      <!-- 同意书 -->
+      <view class='popup popup_book {{popup_book?"active":""}}' bindtap='bind_popup_close'>
+        <view class='title'>使用同意书</view>
+        <text class='p'>接受物流共享平台同时认同并遵守物流共享平台的使用规则:</text>
+        <text>1、物流共享平台注册后不能上传涉黄、涉赌、涉毒等非法图片和文字（注：物流共享平台信息发布范围：仅限一切与物流相关的信息发布）。</text>
+        <text>2、对于用户上传的所有内容物流共享平台皆有审查和删除的权利。</text>
+        <text>3、注册“物流共享”的用户必须上传真实的个人信息、公司信息以及需求信息，发现信息虚假者或传播不良信息者，物流共享平台有权进行删除，情节严重者，物流共享平台有权举报并交由法律机关追究其法律责任。</text>
+        <text>4、注册的用户若有违约或造成物流共享平台经济损失，物流共享平台有权追究其法律责任。</text>
+      </view>
+
+      <!--发票 -->
+      <view class='popup popup_img {{popup_img?"active":""}}' bindtap='bind_popup_close'>
+        <image src='../../../images/revamp_card_bill.png' mode='widthFix'></image>
+      </view>
+    </view>
+
+
+  </view>
+</view>

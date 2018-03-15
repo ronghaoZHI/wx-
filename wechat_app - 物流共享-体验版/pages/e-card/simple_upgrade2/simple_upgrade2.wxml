@@ -1,0 +1,22 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <!-- 表单 -->
+    <form>
+      <view class='step'>
+        <image src='../../../images/e-card_upgrade2_step.png' mode='widthFix'></image>
+      </view>
+
+      <view class='upgrade'>
+        <view class='bar_wrap'>
+          <view class='bar' style='width:{{num}}%'></view>
+        </view>
+        <view class='bar_num'>{{num}}%</view>
+        <view class='text'>名片正在努力升级中，请耐心等候</view>
+      </view>
+    </form>
+
+  
+
+
+  </view>
+</view>

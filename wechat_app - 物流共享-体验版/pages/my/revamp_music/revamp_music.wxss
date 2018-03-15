@@ -1,0 +1,25 @@
+.weui-cell::before,
+.weui-cells::before,
+.weui-cells::after{
+  border-color: #e7e6e6
+}
+.weui-cells{
+  margin-top: 20rpx;
+}
+.weui-cell::before{
+left: 0
+}
+.weui-cell{
+  padding: 25rpx 45rpx;
+  /* line-height: 90rpx;
+  height: 90rpx; */
+  font-size: 30rpx;
+  color: #666;
+}
+.btn_wrap {
+margin-top:50rpx;
+margin-bottom:50rpx;
+padding: 0 20rpx;
+font-size:36rpx;
+
+}

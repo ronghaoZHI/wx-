@@ -1,0 +1,65 @@
+/* pages/index/index.wxss */
+
+
+/* 起始地址选择 */
+
+.section_address {
+  padding-top: 20rpx;
+  padding-down: 20rpx;
+}
+
+/* 最近访问 */
+
+.section_history {
+  font-size: 28rpx;
+  padding: 0 30rpx;
+  margin-top: 10rpx;
+  margin-bottom: 8rpx;
+}
+
+.section_history text {
+  display: inline-block;
+  padding: 6rpx 30rpx;
+  color: #666;
+  border: 1px solid #e8e8e8;
+  border-radius: 10rpx;
+  margin: 9rpx 18rpx;
+}
+
+/* 列表 */
+
+.section_list .weui-cells{
+  background: transparent;
+}
+.section_list .weui-cell{
+  padding: 15rpx 20rpx;
+}
+.section_list .weui-cell:before{
+  left: 0;
+}
+.section_list .weui-cell .weui-cell__hd {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+.section_list .weui-cell .weui-cell__hd image {
+  width: 100%;
+  height: 100%;
+}
+.weui-cell .weui-cell__bd .name{
+  font-size: 30rpx;
+  color: #666666;
+}
+.weui-cell .weui-cell__bd .address{
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 10rpx;
+}
+.section_list .weui-cell .weui-cell__ft{
+  align-self: flex-start;
+  font-size: 24rpx;
+  color: #999999;
+}
+

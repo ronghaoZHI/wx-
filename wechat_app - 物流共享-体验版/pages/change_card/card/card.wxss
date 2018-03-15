@@ -1,0 +1,59 @@
+/* pages/blank/blank.wxss */
+page,
+.page,
+.page_bd{
+  width: 100%;
+  height: 100%;
+  position: relative
+}
+.bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.section_content{
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  height: 440rpx;
+  box-sizing: border-box;
+  padding-top: 85rpx;
+}
+.section_content .title{
+  font-size: 36rpx;
+  margin-bottom: 20rpx;
+}
+.section_content text text.color{
+  color: #ff7e00
+}
+.logo{
+  display: block;
+  width: 135rpx;
+  margin: 0 auto 10rpx auto;
+}
+.section_btn{
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); */
+  width: 100%;
+}
+.section_btn .btn{
+  margin: 40rpx 60rpx;
+  box-sizing: border-box;
+  height: 90rpx;
+  font-size: 36rpx;
+  color: #fff;
+  line-height: 90rpx;
+  background: transparent;
+  border: 1rpx solid #dedede;
+  border-radius: 10rpx;
+}
+.section_btn .btn:active{
+  color: #353535;
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(255, 255, 255, 0.6)
+}

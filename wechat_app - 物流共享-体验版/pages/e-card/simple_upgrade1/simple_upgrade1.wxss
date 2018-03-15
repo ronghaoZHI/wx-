@@ -1,0 +1,76 @@
+@import '../../change_card/app_company/app_company';
+.navigator_music .weui-label {
+  font-size: 30rpx;
+  color: #666;
+}
+
+.step {
+  width: 535rpx;
+  margin: 40rpx auto 0 auto;
+}
+
+.step image {
+  display: block;
+  width: 100%;
+}
+
+.title {
+  margin-top: 20rpx;
+  padding-bottom: 0;
+  font-size: 34rpx;
+}
+
+.title_info {
+  margin-top: 20rpx;
+  padding-bottom: 0;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+}
+
+.title_info text {
+  color: #ff7e00;
+}
+
+.title_item .weui-label {
+  font-size: 30rpx;
+}
+
+.upgrade .bar_wrap {
+  background: #2a5fe5;
+  width: 500rpx;
+  height: 20rpx;
+  margin: 150rpx auto 30rpx auto;
+  border-radius: 10rpx;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.upgrade .bar_num {
+  font-size: 36rpx;
+  color: #ff7e00;
+  text-align: center;
+  margin-bottom: 150rpx;
+}
+
+.upgrade .text {
+  font-size: 30rpx;
+  color: #666;
+  text-align: center;
+}
+
+.upgrade .bar_wrap .bar {
+  background: #ff7e00;
+  height: 100%;
+  border-radius: 10rpx;
+}
+
+.upgrade image {
+  display: block;
+  width: 170rpx;
+  margin: 115rpx auto 80rpx auto;
+}
+
+.btn {
+  line-height: 2.55555556;
+  border-radius: 5px;
+}

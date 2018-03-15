@@ -1,0 +1,30 @@
+<!--pages/blank/blank.wxml-->
+
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <image class='bg' src='../../../images/change_card_bg.png' mode='aspectFill'></image>
+  <view class='page_bd'>
+
+    <!-- 文字 -->
+    <view class='section_text'>
+      <text>物流共享提醒您
+您还没有专属名片，请打造您的名片</text>
+    </view>
+
+    <!-- 图片 -->
+    <view class='section_img'>
+      <navigator url='../pay/pay' class='item' hover-class='none' hover-stay-time='{{navigator_time}}'>
+        <text>简约时尚版</text>
+        <image src='../../../images/e-card_make_simple.png' mode='widthFix'></image>
+      </navigator>
+      <navigator url='../pay168/pay168' class='item' hover-class='none' hover-stay-time='{{navigator_time}}'>
+        <text>智能升级版</text>
+        <image src='../../../images/e-card_make_update.png' mode='widthFix'></image>
+      </navigator>
+    </view>
+
+    <!-- 视频 -->
+    <view class='section_video'>
+      <video controls src='http://www.w3school.com.cn/i/movie.ogg' poster='../../../images/e-card_make_video.png'></video>
+    </view>
+  </view>
+</view>

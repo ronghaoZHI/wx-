@@ -1,0 +1,18 @@
+
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class='page_hd'>
+    <view class='section_content'>
+      <view class='ul'>
+        <view class='li'>
+          <text>姓名：</text><text>王小姐</text>
+        </view>
+        <view class='li'>
+          <text>电话：</text><text>17310258614</text>
+        </view>
+        <view class='li'>
+          <text>我是王小姐，我对您家产品很感兴趣，已经给您留了联系方式，希望尽快联系我</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

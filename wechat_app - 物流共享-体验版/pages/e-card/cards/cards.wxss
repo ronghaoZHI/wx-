@@ -1,0 +1,12 @@
+/* pages/e-card/cards/cards.wxss */
+page{
+  background: #fff
+}
+.section_interest .item{
+  width: 25%
+}
+.scrollTop {
+  width: 133rpx;
+  height: 168rpx;
+  bottom: 500rpx;
+}

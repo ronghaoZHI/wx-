@@ -1,0 +1,4 @@
+@import '../../e-card/simple_upgrade1/simple_upgrade1';
+.weui-cells:before{
+  display: none;
+}

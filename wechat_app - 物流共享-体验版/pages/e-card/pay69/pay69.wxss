@@ -1,0 +1,54 @@
+/* pages/e-card/pay69/pay69.wxss */
+.section_content {
+  /* position: absolute;
+  top: 110rpx;
+  left: 50%;
+  transform: translate(-50%,0) */
+  width: 650rpx;
+  margin: 110rpx auto;
+  position: relative;
+}
+
+.section_content image {
+  display: block;
+  width: 650rpx;
+}
+
+.section_content .title {
+  position: absolute;
+  top: 68rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 36rpx;
+  color: #999;
+}
+
+.section_content .money {
+  position: absolute;
+  top: 372rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 48rpx;
+  color: #999;
+}
+
+.section_content .money .num {
+  font-size: 84rpx;
+  color: #ff8a00;
+}
+
+.section_content button {
+  position: absolute;
+  bottom: 90rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500rpx;
+  height: 90rpx;
+  font-size: 36rpx;
+  background: #09bb07;
+  color: #fff;
+}
+
+button::after {
+  display: none;
+}

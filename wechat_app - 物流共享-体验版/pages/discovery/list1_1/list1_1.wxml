@@ -1,0 +1,111 @@
+<view class="page page_discovery page_discovery_list" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <!-- 搜索 -->
+    <view class='section_search'>
+      <view class='address'>
+        <image class='icon_address' src='../../../images/icon_address.png' mode='widthFix'></image>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+          <text>{{region[1]}}</text>
+        </picker>
+        <image class='icon_down' src='../../../images/icon_down.png' mode='widthFix'></image>
+      </view>
+
+      <view class='search'>
+        <image class='icon_search' src='../../../images/icon_search.png' mode='widthFix'></image>
+        <input placeholder='请输入搜索关键字'></input>
+        <image class='icon_voice' src='../../../images/icon_voice.png' mode='widthFix'></image>
+      </view>
+    </view>
+
+    <view class='section_tab2 row'>
+      <navigator url='../list1_1/list1_1' class='col-3 active' hover-stay-time='{{navigator_time}}'  open-type='redirectTo'>
+        <text>装卸队</text>
+      </navigator>
+      <navigator url='../list1_2/list1_2' class='col-3' hover-stay-time='{{navigator_time}}'  open-type='redirectTo'>
+        <text>安装队</text>
+      </navigator>
+      <navigator url='../list1_3/list1_3' class='col-3' hover-stay-time='{{navigator_time}}'  open-type='redirectTo'>
+        <text>司机</text>
+      </navigator>
+      <navigator url='../list1_4/list1_4' class='col-3' hover-stay-time='{{navigator_time}}'  open-type='redirectTo'>
+        <text>包装服务</text>
+      </navigator>
+    </view>
+
+    <!-- 列表 -->
+    <view class='section_enter'>
+      <view class="weui-cells weui-cells_after-title">
+        <navigator url="../list_content1_1/list_content1_1" class="weui-cell weui-cell_access" hover-stay-time='{{navigator_time}}'>
+          <view class="weui-cell__hd">
+            <image src="../../../images/test_publish_new.png"></image>
+          </view>
+          <view class="weui-cell__bd">
+            <view class='name'>
+              <text>王师傅</text>
+              <text>十米房高</text>
+            </view>
+            <view class='address'>
+              <text>北京市昌平区天通苑</text>
+            </view>
+          </view>
+          <view class="weui-cell__ft">
+            <view>
+              <text>上午</text>
+              <text>10:22</text>
+            </view>
+            <view>
+              <text>下午</text>
+              <text>17:22</text>
+            </view>
+          </view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-stay-time='{{navigator_time}}'>
+          <view class="weui-cell__hd">
+            <image src="../../../images/test_publish_new.png"></image>
+          </view>
+          <view class="weui-cell__bd">
+            <view class='name'>
+              <text>王师傅</text>
+              <text>十米房高</text>
+            </view>
+            <view class='address'>
+              <text>北京市昌平区天通苑</text>
+            </view>
+          </view>
+          <view class="weui-cell__ft">
+            <view>
+              <text>下午</text>
+              <text>17:22</text>
+            </view>
+          </view>
+        </navigator>
+        <navigator url="" class="weui-cell weui-cell_access" hover-stay-time='{{navigator_time}}'>
+          <view class="weui-cell__hd">
+            <image src="../../../images/test_publish_new.png"></image>
+          </view>
+          <view class="weui-cell__bd">
+            <view class='name'>
+              <text>王师傅</text>
+              <text>十米房高</text>
+            </view>
+            <view class='address'>
+              <text>北京市昌平区天通苑</text>
+            </view>
+          </view>
+          <view class="weui-cell__ft">
+            <view>
+              <text>上午</text>
+              <text>10:22</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+
+    <!-- 置顶 -->
+    <view class='scrollTop'>
+      <image src='../../../images/discovery.png' mode='widthFix'></image>
+    </view>
+
+  </view>
+</view>

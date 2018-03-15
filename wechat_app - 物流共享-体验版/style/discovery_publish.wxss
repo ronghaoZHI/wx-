@@ -1,0 +1,69 @@
+.section_tab {
+  margin: 20rpx;
+  color: #333333;
+}
+
+.section_tab>navigator {
+  border: 1px solid #b8b8b8;
+}
+
+.section_tab>navigator.active {
+  color: #fff;
+  border: none;
+  background: #fd7a28;
+  border-color: #fd7a28;
+}
+
+.section_form textarea{
+  background: #fff;
+  width: 100%;
+  height: 300rpx;
+  padding: 5rpx 10rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+.section_form .weui-cells{
+  margin: 20rpx 0;
+}
+.section_form .weui-cell{
+  padding: 20rpx;
+  font-size: 30rpx!important;
+}
+.section_form .weui-cells::before,
+.section_form .weui-cells::after,
+.section_form .weui-cell::before,
+.section_form .weui-cell::after{
+  display: none;
+}
+
+.section_form .weui-cell__hd image{
+  width: 28rpx;
+  margin-right: 10rpx;
+}
+.section_form .show{
+  display: block;
+}
+.section_form .hidden{
+  display: none
+}
+.section_form .weui-btn{
+  margin: 80rpx 20rpx 40rpx 20rpx;
+  background-color:#ff7e00;
+  outline: none;
+}
+.section_form button::after{
+  display: none;
+}
+.section_form .weui-select{
+  border-right: none;
+   position: inherit;
+   padding-right:0px;  
+
+}
+.section_form .show .weui-cell__ft{
+  color: #333333;
+  padding-right: 40rpx;
+}
+.section_form .money .weui-cell__ft{
+  color: #ff7e00;
+}

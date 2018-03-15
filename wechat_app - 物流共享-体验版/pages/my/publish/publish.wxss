@@ -1,0 +1,23 @@
+.section_btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+.section_btn .btn{
+  margin: 40rpx 60rpx;
+  box-sizing: border-box;
+  height: 90rpx;
+  font-size: 36rpx;
+  color: #666;
+  line-height: 90rpx;
+  background: transparent;
+  border: 1rpx solid #dedede;
+  border-radius: 10rpx;
+}
+.section_btn .btn:active{
+  color: #fff;
+  background: #ff7e00;
+  border-color: #ff7e00;
+}

@@ -1,0 +1,5 @@
+@import '../../e-card/simple_upgrade1/simple_upgrade1';
+
+form{
+  padding: 0 120rpx
+}

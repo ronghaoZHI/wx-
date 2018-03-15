@@ -1,0 +1,44 @@
+.weui-cell::before, .weui-cells::before, .weui-cells::after {
+  border-color: #e7e6e6;
+}
+
+.weui-cell::before {
+  left: 0;
+}
+
+.weui-cell {
+  padding: 15rpx 25rpx;
+  font-size: 30rpx;
+  color: #666;
+  box-sizing: border-box;
+}
+
+.weui-cell image {
+  display: block;
+  width: 90rpx;
+}
+
+.weui-cell .weui-cell__hd {
+  margin-right: 20rpx;
+}
+
+.weui-cell .name {
+  font-size: 30rpx;
+  color: #ff7e00;
+}
+
+.weui-cell .text {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 10rpx;
+  width: 566rpx;
+}
+
+.weui-cell .title {
+  font-size: 36rpx;
+  color: #666;
+}
+.weui-cell_switch{
+  height: 118rpx;
+  background: #fff;
+}

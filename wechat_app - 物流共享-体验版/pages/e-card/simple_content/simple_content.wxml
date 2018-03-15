@@ -1,0 +1,87 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <image class='bg' src="{{person_img? person_img: '../../../images/wuliu_01.jpg'}}" mode='scaleToFill'></image>
+  <view class='page_bd'>
+    <!-- 个人基本信息 -->
+    <view class='section_intro'>
+     <view class='ul'>
+        <view class='li name'>
+          <view class='li_bd '>
+            <text>{{name? name :'郭丽欢'}}</text>
+            {{position?position : 'UI设计师'}}
+          </view>
+        </view>
+        <view class='li'>
+          <view class='li_bd'>
+            {{company_name? company_name: '北京亿龙云海科技联盟有限公司'}}
+          </view>
+        </view>
+        <view class='li'>
+          <view class='li_hd'>
+            <image src='../../../images/icon_e-card_upgrade_phone2.png' mode='widthFix'></image>
+          </view>
+          <view class='li_bd'>
+            <text bindtap='bind_card_phone' data-phone='{{mobile? mobile: "13901231234"}}'>{{mobile? mobile: '13901231234'}}</text>
+          </view>
+        </view>
+        <view class='li wx'>
+          <view class='li_hd'>
+            <image src='../../../images/icon_e-card_upgrade_wx.png' mode='widthFix'></image>
+          </view>
+          <view class='li_bd'>
+            <text data-copy='{{wechat? wechat:"353303755"}}' bindtap='bind_copy'>{{wechat? wechat:"353303755"}}</text>
+            <image data-copy='{{wechat? wechat:"353303755"}}' bindtap='bind_copy' src='../../../images/icon_e-card_upgrade_add.png' mode='widthFix'></image>
+          </view>
+        </view>
+        <view class='li'>
+          <view class='li_hd'>
+            <image src='../../../images/icon_e-card_upgrade_address.png' mode='widthFix'></image>
+          </view>
+          <view class='li_bd ellipsis'>
+            <text bindtap='bind_getlocation' data-name='{{company_name? company_name:"北京亿龙云海科技联盟有限公司" }}' data-address='{{company_address? company_address: "北京大兴亦庄开发区经海四路25号院6号楼105"}}'>{{company_address? company_address: "北京大兴亦庄开发区经海四路25号院6号楼105"}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 音乐 -->
+    <audio id='myAudio'  name="{{music_id? music_id:'追光者'}}"  src="{{music_id? music_id:'http://up.mcyt.net/down/40587.mp3'}}"  controls  loop></audio>
+    <!-- 右侧固定菜单 -->
+    <view class='section_right'>
+      <view>
+        <image src='../../../images/icon_e-card_upgrade_right1.png' mode='widthFix' class='music {{music?"active":""}}' bindtap='bind_music'></image>
+      </view>
+      <view>
+        <image src='{{love?"../../../images/icon_e-card_upgrade_right3_1.png":"../../../images/icon_e-card_upgrade_right3_0.png"}}' mode='widthFix' bindtap='bind_love'></image>
+      </view>
+      <view>
+        <image src='../../../images/icon_e-card_upgrade_right4.png' mode='widthFix' data-phone='13901231234' bindtap='bind_phone'></image>
+      </view>
+      <view>
+        <image src='../../../images/icon_e-card_upgrade_right5.png' mode='widthFix' bindtap='bind_getlocation' data-name='{{company_name? company_name:"北京亿龙云海科技联盟有限公司" }}' data-address='{{company_address? company_address: "北京大兴亦庄开发区经海四路25号院6号楼105"}}'></image>
+      </view>
+    </view>
+    <!-- 页脚 -->
+    <view class='section_footer'>
+      <navigator class='item' url='../../change_card/app_car_content/app_car_content' hover-class='none' hover-stay-time='{{navigator_time}}'>
+        <image src='../../../images/icon_e-card_upgrade_footer1.png' mode='widthFix'></image>
+        <text>公司简介</text>
+      </navigator>
+      <view class='item disabled' bindtap='bind_update'>
+        <image src='../../../images/icon_e-card_upgrade_footer2.png' mode='widthFix'></image>
+        <text>个人风采</text>
+      </view>
+      <view class='item card'>
+        <image src='../../../images/icon_e-card_upgrade_footer3.png' mode='widthFix'></image>
+        <text>递名片</text>
+      </view>
+      <view class='item disabled' bindtap='bind_update'>
+        <image src='../../../images/icon_e-card_upgrade_footer4.png' mode='widthFix'></image>
+        <text>产品专区</text>
+      </view>
+      <navigator class='item' url='../message/message' hover-class='none' hover-stay-time='{{navigator_time}}'>
+        <image src='../../../images/icon_e-card_upgrade_footer5.png' mode='widthFix'></image>
+        <text>咨询留言</text>
+      </navigator>
+      <view class='footer_bg'></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,199 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+
+    <!-- tab选项卡 -->
+    <view class='section_tab style2'>
+      <view class='tab_hd'>
+        <navigator url="" class='tab_hd_item active' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          车队
+        </navigator>
+
+        <navigator url="../app_driver/app_driver" class='tab_hd_item ' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          司机
+        </navigator>
+      </view>
+    </view>
+
+    <!-- 表单 -->
+    <form>
+
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">姓 名:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入真实姓名" placeholder-class='placeholder' />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">手机号:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入手机号" placeholder-class='placeholder' bindblur='bind_validatemobile'/>
+          </view>
+
+        </view>
+        \
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">公司名称:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入公司名称" placeholder-class='placeholder' />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">公司地址:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入公司地址" placeholder-class='placeholder' />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode textarea_wrap">
+          <view class="weui-cell__hd">
+            <view class="weui-label">公司简介:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <textarea placeholder='请输入公司简介(文字不得超过60字)' maxlength='60' placeholder-class='placeholder'></textarea>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">公司电话:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入公司电话" placeholder-class='placeholder' bindblur='bind_checkTel'/>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode textarea_wrap">
+          <view class="weui-cell__hd">
+            <view class="weui-label">合作品牌:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <textarea placeholder='请输入合作品牌' placeholder-class='placeholder'></textarea>
+          </view>
+        </view>
+
+        <view class="weui-cell uploader_wrap">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__hd">
+                <view class="weui-uploader__title">产品展示:</view>
+                <view class="weui-uploader__info">{{files.length}}/2</view>
+              </view>
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for-items="{{files_show}}" wx:key="{{index}}">
+                  <view class="weui-uploader__file" data-index='{{index}}' id="{{item}}">
+                      <image class='close' src='../../../images/icon_close.png' mode='widthFix' bindtap="bind_deleteImg_show" data-index='{{index}}'></image>
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                    </view>
+                  </block>
+                  <!-- <view class="weui-uploader__file">
+                    <image class="weui-uploader__img" src="../../../images/discovery_index_img3.png" mode="aspectFill" />
+                  </view> -->
+                </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage_show"></view>
+                </view>
+                <view class="weui-cells__tips {{tips_show}}">请上传公司或企业的产品图片</view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="weui-cell uploader_wrap">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__hd">
+                <view class="weui-uploader__title">认证图片:</view>
+                <view class="weui-uploader__info">{{files.length}}/2</view>
+              </view>
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for-items="{{files_rz}}" wx:key="{{index}}">
+                    <view class="weui-uploader__file" data-index='{{index}}' id="{{item}}">
+                      <image class='close' src='../../../images/icon_close.png' mode='widthFix' bindtap="bind_deleteImg_rz" data-index='{{index}}'></image>
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                    </view>
+                  </block>
+                  <!-- <view class="weui-uploader__file">
+                    <image class="weui-uploader__img" src="../../../images/discovery_index_img3.png" mode="aspectFill" />
+                  </view> -->
+                </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage_rz"></view>
+                </view>
+                <view class="weui-cells__tips {{tips_rz}}">
+                  <text>1.请上传您的营业执照\n2.手持身份证面与上半身头像正面合影一张</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+
+        <!-- 起始地址选择 -->
+        <view>
+          <view class='title'>
+            主营专线:
+          </view>
+
+          <view class='section_address clearfix'>
+            <view class='star ellipsis-1 address'>
+              <picker mode="region" bindchange="bindRegionChange_star" value="{{region_star}}" custom-item="{{customItem}}">
+                {{region_star[1]}}
+              </picker>
+            </view>
+            <image class='icon_go' src='../../../images/icon_LPL_go2.png' mode='widthFix'></image>
+            <view class='to ellipsis-1 address'>
+              <picker mode="region" bindchange="bindRegionChange_to" value="{{region_to}}" custom-item="{{customItem}}">
+                {{region_to[1]}}
+              </picker>
+            </view>
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_checkbox weui-cell_vcode">
+          <checkbox-group>
+            <label>
+              <checkbox color='#ff7e00'></checkbox>完善信息，获得
+              <text bindtap='bind_popup_my'>我的小程序</text>
+            </label>
+            <label>
+              <checkbox color='#ff7e00'></checkbox>我已阅读并同意
+              <text bindtap='bind_popup_book'>《使用同意书》</text>
+            </label>
+          </checkbox-group>
+        </view>
+      </view>
+      <view class='col-12 btn_wrap'>
+        <button class='btn' form-type='submit'>提交</button>
+      </view>
+    </form>
+
+    <!-- 遮罩层 -->
+    <view class='mask {{mask?"active":""}}' bindtap='bind_popup_close'></view>
+
+    <!-- 弹窗-->
+    <view class='section_popup'>
+      <!-- 同意书 -->
+      <view class='popup popup_book {{popup_book?"active":""}}' bindtap='bind_popup_close'>
+        <view class='title'>使用同意书</view>
+        <text class='p'>接受物流共享平台同时认同并遵守物流共享平台的使用规则:</text>
+        <text>1、物流共享平台注册后不能上传涉黄、涉赌、涉毒等非法图片和文字（注：物流共享平台信息发布范围：仅限一切与物流相关的信息发布）。</text>
+        <text>1、物流共享平台注册后不能上传涉黄、涉赌、涉毒等非法图片和文字（注：物流共享平台信息发布范围：仅限一切与物流相关的信息发布）。</text>
+        <text>3、注册“物流共享”的用户必须上传真实的个人信息、公司信息以及需求信息，发现信息虚假者或传播不良信息者，物流共享平台有权进行删除，情节严重者，物流共享平台有权举报并交由法律机关追究其法律责任。</text>
+        <text>4、注册的用户若有违约或造成物流共享平台经济损失，物流共享平台有权追究其法律责任。</text>
+      </view>
+      <!--我的小程序 -->
+      <view class='popup popup_my {{popup_my?"active":""}}' bindtap='bind_popup_close'>
+        <image src='../../../images/change_card_my_car.png' mode='widthFix'></image>
+        <text>“我的小程序”不仅可以展示您的个人身份信息，同时还设有展示个人空间和公司企业形象的板块，您可以在此自由的上传图片，以帮助您更加理想的进行个人宣传或企业推广。想要获得“我的小程序”，请完善您的信息。</text>
+      </view>
+    </view>
+  </view>
+</view>

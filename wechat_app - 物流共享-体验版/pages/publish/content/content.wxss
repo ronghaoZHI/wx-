@@ -1,0 +1,71 @@
+/* pages/index/index.wxss */
+
+/* tab选项卡 */
+
+.section_table {
+  padding: 30rpx 20rpx;
+}
+
+.table {
+  border: 1px solid #e6e6e6;
+  background: #fff;
+}
+
+.tr {
+  display: flex;
+  width: 100%;
+  /* justify-content: center; *//* height: 3rem; */
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.td{
+  padding: 20rpx 0;
+  border-left: 1px solid #e6e6e6;
+  text-align: center;
+  align-self:center;
+}
+.td text{
+  margin-right: 10rpx;
+}
+.table .tr .td:first-of-type {
+  flex-basis: 150rpx;
+  border-left: none;
+}
+.table .tr .td:nth-of-type(2){
+  flex: 1;
+  padding: 20rpx;
+  text-align: left;
+  color: #999;
+}
+.table .tr:last-of-type {
+  border-bottom: none;
+}
+
+.phone{
+  color: #ff7e00
+}
+
+.footer{
+  width: 100%;
+  position: fixed;
+  padding: 40rpx 45rpx;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 90rpx;
+}
+.footer .last{
+  display: block;
+  background: #dedede;
+  font-size: 36rpx;
+}
+.footer .next{
+  display: block;
+  background: #ff7e00;
+  font-size: 36rpx;
+  color: #fff;
+}
+.footer .num{
+  font-size: 30rpx
+}

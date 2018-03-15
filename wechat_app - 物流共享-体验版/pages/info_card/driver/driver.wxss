@@ -1,0 +1,35 @@
+/* pages/index/index.wxss */
+
+@import '../../change_card/app_company_content/app_company_content';
+
+.driver .card_bd {
+  padding: 30rpx;
+}
+
+.driver .card_bd .li_item {
+  display: flex;
+  align-items: flex-end;
+  margin: 10rpx 0;
+}
+
+.driver .card_bd .li_item image {
+  display: block;
+  width: 129rpx;
+  margin-right: 20rpx;
+}
+
+.driver .card_bd .li_item .li_item_bd {
+  flex: 1;
+}
+
+.driver .card_bd .li_item .name {
+  font-size: 28rpx;
+}
+
+.driver .card_bd .li_item .name text:nth-of-type(2) {
+  color: #ff7e00;
+}
+
+.driver .card_bd .li_item .address text {
+  margin-right: 30rpx;
+}

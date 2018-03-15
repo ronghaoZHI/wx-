@@ -1,0 +1,49 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <!-- 表单 -->
+
+    <view class="weui-cell weui-cell_switch">
+      <view class="weui-cell__bd title">留言板</view>
+      <view class="weui-cell__ft">
+        <switch bindchange="bind_switch" />
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+
+      <navigator url="" class="weui-cell weui-cell_access" hover-class='none' hover-stay-time='{{navigator_time}}'>
+        <view class="weui-cell__hd">
+          <image src='../../../images/test_publish_new.png' mode='widthFix'></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view class='name'>王小姐</view>
+          <view class='text ellipsis'>留言文字留言文字留言文字留言文字留言文字留言文字留言文字留言文字留言文字</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class='none' hover-stay-time='{{navigator_time}}'>
+        <view class="weui-cell__hd">
+          <image src='../../../images/test_publish_new.png' mode='widthFix'></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view class='name'>王小姐</view>
+          <view class='text ellipsis'>留言文字留言文字留言文字</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class='none' hover-stay-time='{{navigator_time}}'>
+        <view class="weui-cell__hd">
+          <image src='../../../images/test_publish_new.png' mode='widthFix'></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view class='name'>王小姐</view>
+          <view class='text ellipsis'>留言文字留言文字留言文字</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+
+
+
+
+  </view>
+</view>

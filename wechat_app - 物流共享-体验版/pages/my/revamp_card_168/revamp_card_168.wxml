@@ -1,0 +1,325 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+
+    <!-- tab选项卡 -->
+    <view class='section_tab style1'>
+      <view class='tab_hd'>
+        <navigator url="" class='tab_hd_item active' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          修改名片
+        </navigator>
+        <navigator url="../revamp_music/revamp_music" class='tab_hd_item ' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          修改音乐
+        </navigator>
+      </view>
+    </view>
+
+    <!-- 表单 -->
+    <form>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">姓名:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" value='锅里换' placeholder="请输入真实姓名及职务" placeholder-class='placeholder' />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">职位:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" value='UI设计师' placeholder="请输入职务" placeholder-class='placeholder' />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">公司名称:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" value='北京亿龙云海科技联盟有限公司' placeholder="请输入公司名称" placeholder-class='placeholder' />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">手机号码:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" value='17310258612' placeholder="请输入手机号码" placeholder-class='placeholder' bindblur='bind_validatemobile' />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode yzm_wrap">
+          <view class="weui-cell__hd">
+            <view class="weui-label">验证码:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入验证码" placeholder-class='placeholder' />
+          </view>
+          <view class="weui-cell__ft">
+            <view class="weui-vcode-btn">发送验证码</view>
+          </view>
+        </view>
+        <view class="weui-cell uploader_wrap">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for-items="{{files_me}}" wx:key="{{index}}">
+                    <view class="weui-uploader__file" data-index='{{index}}' id="{{item}}">
+                      <image class='close' src='../../../images/icon_close.png' mode='widthFix' bindtap="bind_deleteImg_me" data-index='{{index}}'></image>
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                    </view>
+                  </block>
+                  <view class="weui-uploader__file">
+                    <image class='close' src='../../../images/icon_close.png' mode='widthFix'></image>
+                    <image class="weui-uploader__img" src="../../../images/discovery_index_img3.png" mode="aspectFill" />
+                  </view>
+                </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage_me"></view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">微信:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" value='1404476150' placeholder="请输入微信号" placeholder-class='placeholder' />
+          </view>
+        </view>
+        <view class="weui-cell uploader_wrap">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for-items="{{files_wx}}" wx:key="{{index}}">
+                    <view class="weui-uploader__file" data-index='{{index}}' id="{{item}}">
+                      <image class='close' src='../../../images/icon_close.png' mode='widthFix' bindtap="bind_deleteImg_wx" data-index='{{index}}'></image>
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                    </view>
+                  </block>
+                  <view class="weui-uploader__file">
+                    <image class='close' src='../../../images/icon_close.png' mode='widthFix'></image>
+                    <image class="weui-uploader__img" src="../../../images/discovery_index_img3.png" mode="aspectFill" />
+                  </view>
+                </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage_wx"></view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">QQ:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" value='3565523562' placeholder="请输入QQ号" placeholder-class='placeholder' bindblur='bind_isQQ'/>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">邮箱:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" value='3565523562@qq.com' placeholder="请输入邮箱" placeholder-class='placeholder' bindblur='bind_isEmail' />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">公司地址:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" value='北京大兴亦庄开发区经海四路...' placeholder="请输入公司地址" placeholder-class='placeholder' />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode">
+          <view class="weui-cell__hd">
+            <view class="weui-label">公司电话:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" value='010-68689898' placeholder="请输入公司电话" placeholder-class='placeholder' />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode h1">
+          <view class="weui-cell__hd">
+            <view class="weui-label">个人风采:</view>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode textarea_wrap">
+          <view class="weui-cell__bd">
+            <view class="weui-label">个人介绍:</view>
+            <textarea value='我是一个对理想有着执着追求的人，坚信是金子总会发光。大学毕业后的工作，让我在文案策划方面有了很大的提高，文笔流畅，熟悉传媒工作、广告学制作与设计等工作方面。' placeholder='请输入个人介绍' placeholder-class='placeholder'></textarea>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode textarea_wrap">
+          <view class="weui-cell__bd">
+            <view class="weui-label">个人业绩:</view>
+            <textarea value='1、设计出一套具体的可操作的物流实训流程。2、完成各项基本教学材料的编写。3、设计出一套具体的可操作的物流实训流程' placeholder='请输入个人业绩' placeholder-class='placeholder'></textarea>
+          </view>
+        </view>
+        <view class="weui-cell uploader_wrap">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for-items="{{files_mygrade}}" wx:key="{{index}}">
+                    <view class="weui-uploader__file" data-index='{{index}}' id="{{item}}">
+                      <image class='close' src='../../../images/icon_close.png' mode='widthFix' bindtap="bind_deleteImg_mygrade" data-index='{{index}}'></image>
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                    </view>
+                  </block>
+                  <view class="weui-uploader__file">
+                    <image class='close' src='../../../images/icon_close.png' mode='widthFix'></image>
+                    <image class="weui-uploader__img" src="../../../images/discovery_index_img3.png" mode="aspectFill" />
+                  </view>
+                </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage_mygrade"></view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="weui-cell uploader_wrap">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__hd">
+                <view class="weui-uploader__title">团队合作:</view>
+              </view>
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for-items="{{files_team}}" wx:key="{{index}}">
+                    <view class="weui-uploader__file" data-index='{{index}}' id="{{item}}">
+                      <image class='close' src='../../../images/icon_close.png' mode='widthFix' bindtap="bind_deleteImg_team" data-index='{{index}}'></image>
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                    </view>
+                  </block>
+                  <view class="weui-uploader__file">
+                    <image class='close' src='../../../images/icon_close.png' mode='widthFix'></image>
+                    <image class="weui-uploader__img" src="../../../images/discovery_index_img3.png" mode="aspectFill" />
+                  </view>
+                </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage_team"></view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="weui-cell uploader_wrap">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__hd">
+                <view class="weui-uploader__title">公司活动:</view>
+              </view>
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for-items="{{files_activity}}" wx:key="{{index}}">
+                    <view class="weui-uploader__file" data-index='{{index}}' id="{{item}}">
+                      <image class='close' src='../../../images/icon_close.png' mode='widthFix' bindtap="bind_deleteImg_activity" data-index='{{index}}'></image>
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                    </view>
+                  </block>
+                  <view class="weui-uploader__file">
+                    <image class='close' src='../../../images/icon_close.png' mode='widthFix'></image>
+                    <image class="weui-uploader__img" src="../../../images/discovery_index_img3.png" mode="aspectFill" />
+                  </view>
+                </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage_activity"></view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input weui-cell_vcode h1">
+          <view class="weui-cell__hd">
+            <view class="weui-label">产品专区:</view>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input weui-cell_vcode textarea_wrap">
+          <view class="weui-cell__bd">
+            <view class="weui-label">产品介绍以及使用说明</view>
+            <textarea value='高科技产品是指用于商业目的并且采用高科技和高科技手段生产的知识密集，技术含量大的高附加值创新产品。' placeholder='请输入个人介绍' placeholder-class='placeholder'></textarea>
+          </view>
+        </view>
+        <view class="weui-cell uploader_wrap">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for-items="{{files_show}}" wx:key="{{index}}">
+                    <view class="weui-uploader__file" data-index='{{index}}' id="{{item}}">
+                      <image class='close' src='../../../images/icon_close.png' mode='widthFix' bindtap="bind_deleteImg_show" data-index='{{index}}'></image>
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                    </view>
+                  </block>
+                  <view class="weui-uploader__file">
+                    <image class='close' src='../../../images/icon_close.png' mode='widthFix'></image>
+                    <image class="weui-uploader__img" src="../../../images/discovery_index_img3.png" mode="aspectFill" />
+                  </view>
+                </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage_show"></view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="weui-cell uploader_wrap bill">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__hd">
+                <view class="weui-uploader__title">发票开票信息
+                  <text bindtap='bind_popup_img'>（发票示意图）</text>
+                </view>
+              </view>
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for-items="{{files_bill}}" wx:key="{{index}}">
+                    <view class="weui-uploader__file" data-index='{{index}}' id="{{item}}">
+                      <image class='close' src='../../../images/icon_close.png' mode='widthFix' bindtap="bind_deleteImg_bill" data-index='{{index}}'></image>
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                    </view>
+                  </block>
+                  <view class="weui-uploader__file">
+                    <image class='close' src='../../../images/icon_close.png' mode='widthFix'></image>
+                    <image class="weui-uploader__img" src="../../../images/discovery_index_img3.png" mode="aspectFill" />
+                  </view>
+                </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage_bill"></view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class='col-12 btn_wrap'>
+        <button class='btn' form-type='submit'>确认修改</button>
+      </view>
+
+    </form>
+
+    <!-- 弹窗 -->
+    <view class='popup {{popup_img?"active":""}}'>
+      <view class='content'>
+        <image src='{{bill_img}}' mode='widthFix' bindtap='bind_popup_img'></image>
+      </view>
+    </view>
+
+    <!-- 遮罩层 -->
+    <view class='mask {{mask?"active":""}}' bindtap='bind_popup_close'>
+    </view>
+  </view>
+</view>

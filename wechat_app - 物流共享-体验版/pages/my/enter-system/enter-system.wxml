@@ -1,0 +1,9 @@
+<!--pages/my/enter-system/enter-system.wxml-->
+
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+  <view class=''>网址：<text selectable='true'>{{website}}</text></view>
+  <view class=''>用户名：<text selectable='true'>{{user}}</text></view>
+  <view class=''>密码：<text selectable='true'>{{password}}</text></view>
+  </view>
+  </view>

@@ -1,0 +1,163 @@
+/* 选项卡 */
+
+/* 选项卡-内容 */
+
+.section_tab .tab_bd .ul {
+  padding: 0 20rpx;
+}
+
+.section_tab .tab_bd .ul .li {
+  padding-top: 20rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #dedede;
+}
+
+.section_tab .tab_bd .ul .li:last-of-type {
+  border-bottom: none;
+}
+
+.section_tab .tab_bd .ul .li_hd {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_hd {
+  width: 90rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 25rpx;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_hd image {
+  display: block;
+  width: 100%;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_bd {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_bd .name {
+  font-size: 30rpx;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_ft {
+  text-align: right;
+  color: #666;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_ft .top {
+  display: inline-block;
+  color: #ff7b00;
+  border: 1px solid #ff7b00;
+  padding: 2rpx 4rpx;
+  line-height: 24rpx;
+  margin-left: 10rpx;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_bd .other {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  color: #999;
+  margin-top: 10rpx;
+  font-size: 24rpx;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_bd .other image {
+  width: 20rpx;
+  margin-right: 10rpx;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_bd .other .li_ft_hd {
+  flex: 1;
+}
+
+.section_tab .tab_bd .ul .li_bd {
+  margin-top: 10rpx;
+}
+
+.section_tab .tab_bd .ul .li_bd .text text {
+  display: block;
+  font-size: 26rpx;
+}
+
+.section_tab .tab_bd .ul .li_bd .text .content {
+  color: #666;
+}
+
+.section_tab .tab_bd .ul .li_bd .img {
+  margin-left: -20rpx;
+  margin-right: -20rpx;
+}
+
+.section_tab .tab_bd .ul .li_bd .img .col-12 {
+  margin: 10rpx 0;
+}
+
+.section_tab .tab_bd .ul .li_bd .img image {
+  display: block;
+  width: 100%;
+}
+
+.scrollTop {
+  width: 75rpx;
+  bottom: 160rpx;
+}
+
+/* 页脚 */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background: #fff
+}
+
+.footer>view {
+  flex: 1;
+  text-align: center;
+  color: #999;
+}
+
+.footer>view.active {
+  color: #ff7b00;
+}
+
+.footer>view image {
+  display: block;
+  width: 42rpx;
+  margin: auto;
+}
+
+.footer>view:nth-of-type(3), .footer>view:nth-of-type(4) {
+  font-size: 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #fff;
+}
+
+.footer>view:nth-of-type(3) {
+  background: #f48f2c;
+}
+
+.footer>view:nth-of-type(4) {
+  background: #ff7e00;
+}

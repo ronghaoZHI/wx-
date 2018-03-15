@@ -1,0 +1,276 @@
+/* pages/index/index.wxss */
+
+swiper {
+  height: 300rpx;
+  margin: 20rpx 0;
+}
+
+/* 轮播 */
+
+swiper, .slide-image, .slide-image image {
+  width: 100%;
+}
+
+/* 搜索 */
+
+.section_search {
+  padding: 0 45rpx;
+  height: 100rpx;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: cente;
+  justify-content: space-between;
+  font-size: 28rpx;
+}
+
+.section_search .address {
+  width: 160rpx;
+}
+
+.section_search .icon_address {
+  width: 40rpx;
+  position: relative;
+  top: 8rpx;
+}
+
+.section_search picker {
+  width: 90rpx;
+  margin: 0 6rpx;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 26rpx;
+}
+
+.section_search .icon_down {
+  width: 10rpx;
+  position: relative;
+  top: -8rpx;
+}
+
+.section_search>view {
+  -webkit-align-items: center;
+}
+
+.section_search .search {
+  position: relative;
+  width: 500rpx;
+  padding: 0 80rpx;
+  box-sizing: border-box;
+  border-radius: 30rpx;
+  border: 1px solid #e7e6e6;
+  background: #fff;
+}
+
+.section_search .search .icon_search {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 30rpx;
+  transform: translateY(-50%);
+  width: 30rpx;
+}
+
+.section_search .search .icon_voice {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 30rpx;
+  transform: translateY(-50%);
+  width: 20rpx;
+}
+
+/* 功能 */
+
+.weui-grids {
+  border: none;
+  background: #fff;
+}
+
+.weui-grid {
+  width: 25%;
+  padding: 10px 10px;
+  border: none;
+}
+
+.weui-grid__label {
+  color: #333;
+}
+
+.weui-grid__icon {
+  width: 90rpx;
+}
+
+/* 选项卡 */
+
+/* 选项卡-头部 */
+
+.section_tab .tab_hd {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.section_tab .tab_hd view {
+  flex: 1;
+  text-align: center;
+  box-sizing: border-box;
+  height: 85rpx;
+  line-height: 85rpx;
+  font-size: 36rpx;
+  border: 1px solid #e7e6e6;
+  background: #fff;
+}
+
+.section_tab .tab_hd view.active {
+  color: #144fe3;
+  border-bottom-color: #144fe3;
+}
+
+/* 选项卡-内容 */
+
+.section_tab .tab_bd .ul {
+  display: none;
+  padding: 0 20rpx;
+}
+
+.section_tab .tab_bd .ul.active {
+  display: block;
+}
+
+.section_tab .tab_bd .ul .li {
+  padding-top: 20rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #dedede;
+}
+
+.section_tab .tab_bd .ul .li:last-of-type {
+  border-bottom: none;
+}
+
+.section_tab .tab_bd .ul .li_hd {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_hd {
+  width: 90rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 25rpx;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_hd image {
+  display: block;
+  width: 100%;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_bd {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_bd .name {
+  font-size: 30rpx;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_bd .other {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_bd .other .top {
+  display: inline-block;
+  color: #ff7b00;
+  border: 1px solid #ff7b00;
+  padding: 2rpx 4rpx;
+  line-height: 24rpx;
+  margin-right: 10rpx;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_bd .other .num {
+  color: #ff7b00;
+  margin-left: 10rpx;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_ft {
+  position: relative;
+  z-index: 99;
+  width: 120rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  background: #ff7b00;
+  border-radius: 10rpx;
+}
+
+.section_tab .tab_bd .ul .li_hd .li_hd_ft:active {
+  opacity: 0.7;
+}
+
+.section_tab .tab_bd .ul .li_bd {
+  margin-top: 10rpx;
+}
+
+.section_tab .tab_bd .ul .li_bd .text text {
+  display: block;
+  font-size: 26rpx;
+}
+
+.section_tab .tab_bd .ul .li_bd .text .content {
+  color: #666;
+}
+
+.section_tab .tab_bd .ul .li_bd .img {
+  margin-left: -5rpx;
+  margin-right: -5rpx;
+}
+
+.section_tab .tab_bd .ul .li_bd .img .col-3 {
+  padding: 5rpx;
+}
+
+.section_tab .tab_bd .ul .li_bd .img image {
+  display: block;
+  width: 100%;
+  height: 172rpx;
+}
+
+.section_tab .tab_bd .ul .li_ft {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  color: #999;
+  margin-top: 10rpx;
+  font-size: 24rpx;
+}
+
+.section_tab .tab_bd .ul .li_ft image {
+  width: 20rpx;
+  margin-right: 10rpx;
+}
+
+.section_tab .tab_bd .ul .li_ft .li_ft_hd {
+  flex: 1;
+}
+
+.section_tab .tab_bd .ul .li_ft .li_ft_ft {
+  color: #ff7b00;
+}
+
+.scrollTop {
+  width: 75rpx;
+  bottom: 160rpx;
+}

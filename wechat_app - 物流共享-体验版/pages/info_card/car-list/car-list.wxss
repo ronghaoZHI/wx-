@@ -1,0 +1,79 @@
+/* pages/info_card/car-list/car-list.wxss */
+.section_enter .weui-cells {
+  background: transparent;
+}
+
+.section_enter .weui-cells::before, .section_enter .weui-cells::after,
+.section_enter .weui-cell::before {
+  display: none;
+}
+
+.section_enter .weui-cells__title {
+  font-size: 36rpx;
+  padding: 20rpx;
+  margin: 0;
+  color: #333;
+}
+
+.section_enter .weui-cells__title::before {
+  position: relative;
+  top: 6rpx;
+  display: inline-block;
+  margin-right: 10rpx;
+  content: "";
+  height: 36rpx;
+  width: 4rpx;
+  background: #ff7e00;
+}
+
+.section_enter .weui-cell {
+  padding: 15rpx 20rpx;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.section_enter .weui-cell:last-of-type{
+  border: none
+}
+
+.section_enter .weui-cell .weui-cell__hd {
+  width: 90rpx;
+  height: 90rpx;
+  box-sizing: border-box;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.section_enter .weui-cell .weui-cell__hd image {
+  display: block;
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.section_enter .weui-cell .weui-cell__bd {
+  padding-left: 20rpx;
+}
+
+.section_enter .weui-cell .weui-cell__bd .name {
+  font-size: 30rpx;
+}
+
+.section_enter .weui-cell .weui-cell__bd .address {
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 10rpx;
+}
+
+.section_enter .weui-cell .weui-cell__ft {
+  font-size: 24rpx;
+  color: #666;
+
+}
+
+.section_enter .weui-cell .weui-cell__ft text {
+  margin-left: 15rpx;
+  
+}
+
+.section_enter .weui-cell .weui-cell__ft text:first-of-type {
+  margin-right: -5rpx;
+}

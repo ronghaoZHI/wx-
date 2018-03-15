@@ -1,0 +1,132 @@
+<!--pages/blank/blank.wxml-->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class='page_bd'>
+    <!-- 搜索 -->
+    <view class='section_search'>
+      <image src='../../../images/icon_search.png' mode='widthFix'></image>
+      <input confirm-type='search' placeholder='请输入关键字' placeholder-class='placeholder' confirm-type='search'></input>
+    </view>
+
+    <!-- 导航头部 -->
+    <view class='section_nav'>
+      <navigator url='../history_logistics/history_logistics' open-type='redirectTo' hover-class='none' hover-stay-time='{{navigator_time}}'>
+        <text>物流货运</text>
+      </navigator>
+      <navigator class='active' url='../history_driver/history_driver' open-type='redirectTo' hover-class='none' hover-stay-time='{{navigator_time}}'>
+        <text>车主司机</text>
+      </navigator>
+      <navigator url='../history_merchant/history_merchant' open-type='redirectTo' hover-class='none' hover-stay-time='{{navigator_time}}'>
+        <text>厂家商家</text>
+      </navigator>
+      <navigator  url='../history_card/history_card' open-type='redirectTo' hover-class='none' hover-stay-time='{{navigator_time}}'>
+        <text>定制名片</text>
+      </navigator>
+    </view>
+
+    <!-- 列表 -->
+    <view class='ul'>
+      <view class='li'>
+        <view class='li_hd'>
+          <image src='{{img_li_hd}}' mode='widthFix'></image>
+          <text>米小姐</text>
+        </view>
+        <view class='li_bd'>
+          <view class='name ellipsis'>
+            亿龙云海物流有限公司
+          </view>
+          <view class='go'>
+            <text>北京市</text>
+            <image src='../../../images/icon_change_go.png' mode='widthFix'></image>
+            <text>佛山市</text>
+          </view>
+          <view class='type'>
+            <text>业务类型：</text>
+            <text>司机师傅</text>
+          </view>
+          <view class='address'>
+            <image src='../../../images/icon_change_address.png' mode='widthFix'></image>
+            <text>北京市大兴区科创三街10号</text>
+          </view>
+        </view>
+        <view class='li_ft'>
+          <view bindtap='bindPhone' data-phone='110'>
+            <image src='../../../images/icon_change_phone.png'  mode='widthFix'></image>
+            <text>电话</text>
+          </view>
+          <view>
+            <image src='../../../images/icon_change_star_0.png'  mode='widthFix'></image>
+            <text>收藏</text>
+          </view>
+        </view>
+      </view>
+      <view class='li'>
+        <view class='li_hd'>
+          <image src='{{img_li_hd}}' mode='widthFix'></image>
+          <text>米小姐</text>
+        </view>
+        <view class='li_bd'>
+          <view class='name ellipsis'>
+            亿龙云海物流有限公司
+          </view>
+          <view class='go'>
+            <text>北京市</text>
+            <image src='../../../images/icon_change_go.png' mode='widthFix'></image>
+            <text>佛山市</text>
+          </view>
+          <view class='type'>
+            <text>业务类型：</text>
+            <text>司机师傅</text>
+          </view>
+          <view class='address'>
+            <image src='../../../images/icon_change_address.png' mode='widthFix'></image>
+            <text>北京市大兴区科创三街10号</text>
+          </view>
+        </view>
+        <view class='li_ft'>
+          <view bindtap='bindPhone' data-phone='110'>
+            <image src='../../../images/icon_change_phone.png'  mode='widthFix'></image>
+            <text>电话</text>
+          </view>
+          <view>
+            <image src='../../../images/icon_change_star_0.png'  mode='widthFix'></image>
+            <text>收藏</text>
+          </view>
+        </view>
+      </view>
+            <view class='li'>
+        <view class='li_hd'>
+          <image src='{{img_li_hd}}' mode='widthFix'></image>
+          <text>米小姐</text>
+        </view>
+        <view class='li_bd'>
+          <view class='name ellipsis'>
+            亿龙云海物流有限公司
+          </view>
+          <view class='go'>
+            <text>北京市</text>
+            <image src='../../../images/icon_change_go.png' mode='widthFix'></image>
+            <text>佛山市</text>
+          </view>
+          <view class='type'>
+            <text>业务类型：</text>
+            <text>司机师傅</text>
+          </view>
+          <view class='address'>
+            <image src='../../../images/icon_change_address.png' mode='widthFix'></image>
+            <text>北京市大兴区科创三街10号</text>
+          </view>
+        </view>
+        <view class='li_ft'>
+          <view bindtap='bindPhone' data-phone='110'>
+            <image src='../../../images/icon_change_phone.png'  mode='widthFix'></image>
+            <text>电话</text>
+          </view>
+          <view>
+            <image src='../../../images/icon_change_star_0.png'  mode='widthFix'></image>
+            <text>收藏</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

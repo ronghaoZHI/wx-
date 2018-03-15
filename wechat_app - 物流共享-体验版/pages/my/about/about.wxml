@@ -1,0 +1,7 @@
+<!--pages/blank/blank.wxml-->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class='page_hd'>
+    <view class='title'>“物流共享"是物流人的贴心好助手!”</view>
+    <text>依托近十亿微信用户，汇集名片推广、物流查询信息发布、资源共享、车货匹配等全新物流理念！让您的提升服务、宣传服务、货运找车找货找专线找仓库、甚至招商招工招租等物流需求全面进入互联网+时代；有效降低经营成本。</text>
+  </view>
+</view>

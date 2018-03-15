@@ -1,0 +1,93 @@
+/* pages/publish/car/car.wxss */
+
+/* 起始地址选择 */
+
+.section_address {
+  padding-top: 20rpx;
+  padding-down: 20rpx;
+}
+
+/* 表单 */
+
+form {
+  display: block;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  font-size: 34rpx;
+}
+form view[class^=col-]{
+  box-sizing: border-box;
+  padding: 10rpx 5rpx;
+}
+form view.title {
+  position: relative;
+  height: 56rpx;
+  line-height: 56rpx;
+  box-sizing: border-box;
+  padding: 0;
+  padding-left: 20rpx;
+
+}
+
+form .title::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 4rpx;
+  height: 34rpx;
+  background: #ff7e00;
+}
+
+form textarea{
+  background: #ffffff;
+  display: block;
+  width: 100%;
+  height: 160rpx;
+  box-sizing: border-box;
+  border: 1px solid #d5d5d5;
+  padding: 20rpx;
+  font-size: 24rpx;
+}
+
+form text{
+  color: #666
+}
+
+.text_wrap{
+  font-size: 30rpx;
+}
+
+.btn_wrap{
+  margin-top: 140rpx;
+}
+
+.icon_select picker, .input_wrap input {
+  background: #fff;
+  line-height: 90rpx;
+  height: 90rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+
+label {
+  line-height: 90rpx;
+  height: 90rpx;
+}
+.text_wrap{
+  font-size: 30rpx;
+  line-height: 3;
+}
+.text_wrap input{
+background:#fff;
+float: right;
+width: 240rpx;
+line-height:80rpx;
+height:80rpx;
+box-sizing:border-box;
+padding:0 20rpx;
+}

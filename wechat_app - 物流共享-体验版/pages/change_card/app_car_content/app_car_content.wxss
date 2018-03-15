@@ -1,0 +1,19 @@
+@import '../app_company_content/app_company_content';
+
+.body {
+  background: #fff;
+}
+
+.card_bd .text_img text {
+  display: block;
+}
+
+
+.company .card_bd {
+  height: auto;
+}
+
+.company .card_bd .info{
+  border: none;
+  padding-top: 0;
+}

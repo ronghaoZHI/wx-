@@ -1,0 +1,110 @@
+<view class="page page_discovery" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    
+   
+
+  
+    <!-- 选项卡 -->
+    <view class='section_tab style1'>
+      <!-- 头部 -->
+      <view class='tab_hd'>
+        <navigator url="../info_collect/info_collect" class='tab_hd_item active' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          发布的信息
+        </navigator>
+        <navigator url="" class='tab_hd_item' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          收藏的信息
+        </navigator>
+        <navigator url="../info_interest/info_interest" class='tab_hd_item' hover-class='none'  hover-stay-time='{{navigator_time}}'>
+          谁对我感兴趣
+        </navigator>
+      </view>
+      <!-- 内容 -->
+      <view class='tab_bd'>
+        <!-- 最新发布 -->
+        <view class="ul active">
+          <view class='li'>
+            <view class='li_hd'>
+              <view class='li_hd_hd'>
+                <image src='../../../images/discovery_index_img4.png' mode='widthFix'></image>
+              </view>
+              <view class='li_hd_bd'>
+                <view class='name'>
+                  农夫三胖
+                </view>
+                <view class='other'>
+                  <text class='top'>置顶</text>供求市场
+                </view>
+              </view>
+              <view class='li_hd_ft' bindtap='bindPhone' data-phone='13888888888'>
+                联系ta
+              </view>
+            </view>
+            <navigator url="../content/content" class='li_bd' hover-class='none' hover-stay-time='{{navigator_time}}' >
+              <view class='text'>
+                <text class='title'>货车节油，动力提升20%，油耗降低18%</text>
+              </view>
+              <view class='img row'>
+                <view class='col-3'>
+                  <image src='../../../images/discovery_index_img1.png'></image>
+                </view>
+                <view class='col-3'>
+                  <image src='../../../images/discovery_index_img2.png'></image>
+                </view>
+                <view class='col-3'>
+                  <image src='../../../images/discovery_index_img3.png'></image>
+                </view>
+                <view class='col-3'>
+                  <image src='../../../images/discovery_index_img4.png'></image>
+                </view>
+              </view>
+            </navigator>
+            <view class='li_ft'>
+              <view class='li_ft_hd'>
+                <image src='../../../images/discovery_index_address.png' mode='widthFix'></image>北京市昌平区天通苑
+              </view>
+              <view class='li_ft_ft'>
+                1天前
+              </view>
+            </view>
+          </view>
+
+          <view class='li'>
+            <view class='li_hd'>
+              <view class='li_hd_hd'>
+                <image src='../../../images/discovery_index_img2.png' mode='widthFix'></image>
+              </view>
+              <view class='li_hd_bd'>
+                <view class='name'>
+                  农夫三胖
+                </view>
+                <view class='other'>
+                  <text class='top'>置顶</text>招聘求职
+                </view>
+              </view>
+              <view class='li_hd_ft' bindtap='bindPhone' data-phone='13888888888'>
+                联系ta
+              </view>
+            </view>
+            <navigator url="" class='li_bd' hover-class='none' hover-stay-time='{{navigator_time}}'>
+              <view class='text'>
+                <text class='title'>【招聘】由于公司业务发展需求，需招聘以下人员\n【办公室文员】2名:</text>
+                <text class='content'>1、女性，年龄25-28岁，高中文化以上2、一年以上相关工作经验，文秘、行政管理等相关专业优先考虑</text>
+              </view>
+
+            </navigator>
+            <view class='li_ft'>
+              <view class='li_ft_hd'>
+                <image src='../../../images/discovery_index_address.png' mode='widthFix'></image>北京市昌平区天通苑
+              </view>
+              <view class='li_ft_ft'>
+                13天前
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+</view>

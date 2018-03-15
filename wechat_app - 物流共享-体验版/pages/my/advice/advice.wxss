@@ -1,0 +1,16 @@
+form{
+  display: block;
+  padding: 30rpx 20rpx
+}
+form textarea{
+  display: block;
+  width: auto;
+  background: #fff;
+  padding: 30rpx 20rpx;
+  font-size: 28rpx;
+}
+.btn_wrap {
+margin-top: 130rpx;
+margin-bottom:50rpx;
+font-size:36rpx;
+}

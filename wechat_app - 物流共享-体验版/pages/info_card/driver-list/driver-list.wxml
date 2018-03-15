@@ -1,0 +1,113 @@
+<!--pages/info_card/driver-list/driver-list.wxml-->
+<view class="page info_card" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+
+    <!-- tab选项卡 -->
+    <view class='section_tab clearfix'>
+      <navigator url='../LTL-list/LTL-list' hover-stay-time='{{navigator_time}}'>
+        零担
+      </navigator>
+      <navigator class='active' url='../driver/driver' hover-stay-time='{{navigator_time}}'>
+        整车
+      </navigator>
+    </view>
+
+    <view class="section_role weui-flex">
+      <navigator class="active weui-flex__item" url='../driver-list/driver-list' hover-stay-time='{{navigator_time}}'>
+        司机
+      </navigator>
+      <navigator class="weui-flex__item" url='../car-list/car-list' hover-stay-time='{{navigator_time}}'>
+        车队
+      </navigator>
+    </view>
+
+    <!-- 起始地址选择 -->
+    <view class='section_address clearfix'>
+      <view class='star ellipsis-1 address'>
+        <image class='icon_address' src='../../../images/icon_address_star.png' mode='widthFix'></image>
+        <picker mode="region" bindchange="bindRegionChange_star" value="{{region_star}}" custom-item="{{customItem}}">
+          {{region_star[1]}}
+        </picker>
+        <image class='icon_down' src='../../../images/icon_down.png' mode='widthFix'></image>
+      </view>
+      <image class='icon_go' src='../../../images/icon_address_go.png' mode='widthFix'></image>
+      <view class='to ellipsis-1 address'>
+        <image class='icon_address' src='../../../images/icon_address_to.png' mode='widthFix'></image>
+        <picker mode="region" bindchange="bindRegionChange_to" value="{{region_to}}" custom-item="{{customItem}}">
+          {{region_to[1]}}
+        </picker>
+        <image class='icon_down' src='../../../images/icon_down.png' mode='widthFix'></image>
+      </view>
+    </view>
+
+    <!-- 列表 -->
+   <view class='section_enter'>
+      <view class="weui-cells weui-cells_after-title">       
+        <navigator wx:for="{{driver_list}}" wx:key ="driver_list"  url="../car/car" class="weui-cell weui-cell_access" hover-class="weui-cell_active" hover-stay-time="{{navigator_time}}" bindtap='set_goods_id' data-goods-id="{{item.id}}">
+          <view class="weui-cell__hd">
+            <image src="../../../images/test_publish_new.png" ></image>
+          </view>
+          <view class="weui-cell__bd">
+            <!-- <view class='name ellipsis-1'>
+              <text> {{item.from? item.from :"北京"}}</text>--
+              <text> {{item.to? item.to :"天津"}}</text>
+            </view> -->
+            <view class='address ellipsis-1'>地址：
+              <text>{{item.address? item.address :"北京市昌平区天通苑"}}</text>
+            </view>
+          </view>
+          <view class="weui-cell__ft">
+            {{item.addtime ? item.addtime :"下午5:25"}}
+          </view>
+        </navigator>     
+        <!-- <navigator url="../driver/driver" class="weui-cell weui-cell_access" hover-stay-time='{{navigator_time}}'>
+          <view class="weui-cell__hd">
+            <image src="../../../images/wuliu_01.jpg"></image>
+          </view>
+          <view class="weui-cell__bd">
+            <view class='name'>
+              <text>上海</text>--
+              <text>四川</text>
+            </view>
+            <view class='address'>地址：
+              <text>北京市昌平区天通苑</text>
+            </view>
+          </view>
+          <view class="weui-cell__ft">
+            <view>
+              <text>上午</text>
+              <text>10:22</text>
+            </view>
+          </view>
+        </navigator>
+        <navigator url="../driver/driver" class="weui-cell weui-cell_access" hover-stay-time='{{navigator_time}}'>
+          <view class="weui-cell__hd">
+            <image src="../../../images/wuliu_01.jpg"></image>
+          </view>
+          <view class="weui-cell__bd">
+            <view class='name'>
+              <text>上海</text>--
+              <text>四川</text>
+            </view>
+            <view class='address'>地址：
+              <text>北京市昌平区天通苑</text>
+            </view>
+          </view>
+          <view class="weui-cell__ft">
+            <view>
+              <text>昨天</text>
+            </view>
+          </view>
+        </navigator> -->
+      </view>
+    </view>
+
+    <!-- 发布 -->
+    <navigator class='scrollTop' hover-stay-time='{{navigator_time}}'>
+      <image src='../../../images/publish.png' mode='widthFix'></image>
+    </navigator>
+
+
+  </view>
+</view>
+

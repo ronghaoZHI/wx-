@@ -1,0 +1,68 @@
+@import'../app_company/app_company';
+.uploader_wrap{
+  background-color: transparent;
+  padding: 0;
+}
+.h1{
+  background: transparent;
+  padding: 10rpx 30rpx;
+}
+.textarea_wrap{
+  background: transparent;
+  padding: 0;
+}
+.textarea_wrap .weui-label{
+  width: 100%;
+  font-size: 30rpx;
+  color: #ff7e00;
+  padding-left: 30rpx;
+  margin-bottom: 10rpx;
+}
+.weui-uploader__hd{
+  font-size: 30rpx;
+  color: #ff7e00;
+  padding-left: 30rpx;
+  padding-bottom: 10rpx
+}
+.textarea_wrap textarea{
+  /* margin-left: -30rpx; */
+  padding: 10rpx 30rpx;
+  font-size: 24rpx;
+  color: #333;
+  box-sizing: border-box
+}
+.bill .weui-uploader__hd{
+  color: #666666;
+}
+.bill .weui-uploader__hd text{
+  color: #ff7e00;
+}
+
+/* 弹窗 */
+.popup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%,-50%);
+  z-index: 99;
+}
+.popup .content{
+ background: #fff;
+ margin: 20rpx;
+}
+.popup image{
+  display: block;
+  width: auto;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.popup,
+.mask{
+display: none;
+}
+.popup.active,
+.mask.active{
+display: block;
+}

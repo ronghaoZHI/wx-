@@ -1,0 +1,99 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+
+    <!-- tab选项卡 -->
+    <view class='section_tab clearfix'>
+      <navigator url='../car/car' class='active' hover-stay-time='{{navigator_time}}'>
+        发布车源
+      </navigator>
+      <navigator url='../goods/goods' hover-stay-time='{{navigator_time}}'>
+        发布货源
+      </navigator>
+    </view>
+
+    <!-- 起始地址选择 -->
+    <view class='section_address clearfix'>
+      <view class='star ellipsis-1 address'>
+        <image class='icon_address' src='../../../images/icon_address_star.png' mode='widthFix'></image>
+        <picker mode="region" bindchange="bindRegionChange_star" value="{{region_star}}" custom-item="{{customItem}}">
+          {{region_star[1]}}
+        </picker>
+        <image class='icon_down' src='../../../images/icon_down.png' mode='widthFix'></image>
+      </view>
+      <image class='icon_go' src='../../../images/icon_address_go.png' mode='widthFix'></image>
+      <view class='to ellipsis-1 address'>
+        <image class='icon_address' src='../../../images/icon_address_to.png' mode='widthFix'></image>
+        <picker mode="region" bindchange="bindRegionChange_to" value="{{region_to}}" custom-item="{{customItem}}">
+          {{region_to[1]}}
+        </picker>
+        <image class='icon_down' src='../../../images/icon_down.png' mode='widthFix'></image>
+      </view>
+    </view>
+    <!-- 表单 -->
+    <form class='row' bindsubmit="formSubmit">
+      <!-- 现有 -->
+      <view class='col-12 title'>
+        现有
+      </view>
+      <view class='col-6 icon_select '>
+        <picker bindchange="bindCarLong" value="{{carLongIndex}}" range="{{carLong}}">
+          <view class='ellipsis-1'>{{carLong[carLongIndex]}}</view>
+        </picker>
+      </view>
+      <view class='col-6 icon_select'>
+        <picker bindchange="bindCarClass" value="{{carClassIndex}}" range="{{carClass}}">
+          <view class='ellipsis-1'>{{carClass[carClassIndex]}}</view>
+        </picker>
+      </view>
+      <!-- 需求 -->
+      <view class='col-12 title'>
+        需求
+      </view>
+      <view class='col-3 input_wrap'>
+        <input name="goodsNum" placeholder='货量'></input>
+      </view>
+      <view class='col-3 icon_select'>
+        <picker bindchange="bindUnitsNum" value="{{unitsNumIndex}}" range="{{unitsNum}}">
+          <view class='ellipsis-1'>{{unitsNum[unitsNumIndex]}}</view>
+        </picker>
+      </view>
+      <view class='col-6 icon_select'>
+        <picker bindchange="bindGoodsClass" value="{{goodsClassIndex}}" range="{{goodsClass}}">
+          <view class='ellipsis-1'>{{goodsClass[goodsClassIndex]}}</view>
+        </picker>
+      </view>
+      <view class='col-3 label_wrap'>
+        <label>途径城市</label>
+      </view>
+      <view class='col-9 icon_select'>
+        <picker mode="region" bindchange="bindRegionChange_form" value="{{region_form}}" custom-item="{{customItem}}">
+          {{region_form[1]}}
+        </picker>
+      </view>
+      <view class='col-3 label_wrap'>
+        <label>备注</label>
+      </view>
+      <view class='col-9 icon_select'>
+        <picker bindchange="bindinfo" value="{{infoIndex}}" range="{{info}}">
+          <view class='ellipsis-1'>{{info[infoIndex]}}</view>
+        </picker>
+      </view>      
+      <view class='col-6 text_wrap'>
+        手机：
+        <input name="phone" placeholder='17310258614' bindblur='bind_validatemobile'></input>
+      </view>
+      <view class='col-6 text_wrap'>
+        电话：
+        <input name="tel"  placeholder='52917078' bindblur='bind_checkTel'></input>
+      </view>
+
+      <view class='col-12 btn_wrap'>
+        <button class='btn' form-type='submit'>发布</button>
+      </view>
+    </form>
+
+
+
+
+  </view>
+</view>

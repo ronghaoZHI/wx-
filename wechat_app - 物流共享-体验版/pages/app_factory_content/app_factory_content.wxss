@@ -1,0 +1,47 @@
+@import '../change_card/app_company_content/app_company_content';
+
+.body {
+  background: #fff;
+}
+
+.company  .card_hd {
+  height: auto;
+  padding: 25rpx 0;
+  background: #fff;
+}
+
+.company  .card_hd .name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #333;
+}
+
+.card_bd .text_img {
+  display: flex;
+}
+
+.card_bd .text_img image {
+  display: block;
+  width: 160rpx;
+  margin-right: 15rpx
+}
+
+.card_bd .text_img text {
+  display: block;
+}
+
+.card_hd .name image {
+  width: 120rpx;
+  display: block;
+  margin-right: 20rpx;
+}
+.company .card_bd {
+  height: auto;
+}
+
+.company .card_bd .info{
+  border: none;
+  padding-top: 0;
+}

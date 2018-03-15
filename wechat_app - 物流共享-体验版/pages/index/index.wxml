@@ -1,0 +1,124 @@
+<view wx:if="{{load}}" class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+
+    <!-- 轮播 -->
+    <swiper indicator-dots="{{indicatorDots_banner}}" autoplay="{{autoplay}}" interval="{{interval_banner}}" duration="{{duration}}" circular="{{circular}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <navigator url="{{item.link}}" hover-class="navigator-hover">
+            <image src="{{item.photo}}" class="slide-image" mode='widthFix' />
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <!-- 搜索 -->
+    <view class='section_search'>
+      <view class='address'>
+        <image class='icon_address' src='../../images/icon_address.png' mode='widthFix'></image>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+          <text>{{region[1]}}</text>
+        </picker>
+        <image class='icon_down' src='../../images/icon_down.png' mode='widthFix'></image>
+      </view>
+
+      <view class='search'>
+        <image class='icon_search' src='../../images/icon_search.png' mode='widthFix'></image>
+        <input placeholder='请输入搜索关键字'></input>
+        <image class='icon_voice' src='../../images/icon_voice.png' mode='widthFix'></image>
+      </view>
+    </view>
+
+    <!-- 功能 -->
+    <view class="weui-grids">
+      <!-- <navigator  url="../change_card/card_make/card_make" class="weui-grid">
+        <image class="weui-grid__icon" src="../../images/my_index_icon_3.png" />
+        <view class="weui-grid__label">入驻</view>
+      </navigator> -->
+      <navigator  bindtap='readme' class="weui-grid">
+        <image class="weui-grid__icon" src="../../images/my_index_icon_3.png" />
+        <view class="weui-grid__label">入驻</view>
+      </navigator>
+      <navigator url="../logistics/goods/goods" class="weui-grid">
+        <image class="weui-grid__icon" src="../../images/index_grid_2.png" />
+        <view class="weui-grid__label">物流</view>
+      </navigator>
+      <navigator url="../info_card/LTL-list/LTL-list" class="weui-grid">
+        <image class="weui-grid__icon" src="../../images/index_grid_3.png" />
+        <view class="weui-grid__label">专线</view>
+      </navigator>
+      <navigator url="../publish/car/car" class="weui-grid">
+        <image class="weui-grid__icon" src="../../images/index_grid_4.png" />
+        <view class="weui-grid__label">发布</view>
+      </navigator>
+    </view>
+
+    <!-- 最新发布 -->
+    <view class='section_new clearfix'>
+      <view class='img'>
+        <image src='../../images/new.png' mode='widthFix'></image>
+      </view>
+      <view class='text'>
+        <swiper indicator-dots="{{indicatorDots_new}}" autoplay="{{autoplay}}" interval="{{interval_new}}" duration="{{duration}}" vertical='{{vertical}}'>
+          <swiper-item>
+            <navigator class='ellipsis-1' url="../publish/new/new" hover-class="navigator-hover">
+              <view>这里是文字这里是文字这里是文字这里是文字这里是文字这里是文字</view>
+            </navigator>
+            <navigator class='ellipsis-1' url="../publish/new/new" hover-class="navigator-hover">
+              <view>这里是文字</view>
+            </navigator>
+          </swiper-item>
+          <swiper-item>
+            <navigator class='ellipsis-1' url="../publish/new/new" hover-class="navigator-hover">
+              <view>这里是文字</view>
+            </navigator>
+            <navigator class='ellipsis-1' url="../publish/new/new" hover-class="navigator-hover">
+              <view>这里是文字这里是文字这里是文字这里是文字</view>
+            </navigator>
+          </swiper-item>
+        </swiper>
+      </view>
+    </view>
+
+    <!-- 入驻商家 -->
+    <view class='section_enter'>
+      <view class="weui-cells__title">入驻商家</view>
+      <view class="weui-cells weui-cells_after-title">
+        <navigator url="../change_card/app_factory_content/app_factory_content" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../../images/wuliu_01.jpg"></image>
+          </view>
+          <view class="weui-cell__bd">
+            <view class='name ellipsis-1'>北京福满装饰有限公司</view>
+            <view class='address ellipsis-1'>地址：
+              <text>北京市昌平区天通苑</text>
+            </view>
+          </view>
+          <view class="weui-cell__ft">MORE
+            <text>></text>
+            <text>></text>
+          </view>
+        </navigator>
+        <navigator url="../change_card/app_factory_content/app_factory_content" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../../images/wuliu_01.jpg"></image>
+          </view>
+          <view class="weui-cell__bd">
+            <view class='name ellipsis-1'>北京福满装饰有限公司</view>
+            <view class='address ellipsis-1'>地址：
+              <text>北京市昌平区天通苑</text>
+            </view>
+          </view>
+          <view class="weui-cell__ft">MORE
+            <text>></text>
+            <text>></text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <!-- 置顶 -->
+    <view class='scrollTop' bindtap='scrollTop'>
+      <image src='../../images/scrollTop.png' mode='widthFix'></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<!--pages/blank/blank.wxml-->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+<view class='page_hd'>
+  <view class='section_btn'>
+     <navigator class="btn active" hover-stay-time='{{navigator_time}}'>发布车源</navigator>
+     <navigator class="btn" hover-stay-time='{{navigator_time}}'>发布货源</navigator>
+     <navigator class="btn" hover-stay-time='{{navigator_time}}'>供求发布</navigator>
+  </view>
+</view>
+</view>

@@ -1,0 +1,53 @@
+<!--pages/blank/blank.wxml-->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class='page_hd'>
+    <!-- 选项卡 -->
+    <view class='section_tab style1'>
+      <!-- 头部 -->
+      <view class='tab_hd'>
+        <!-- <navigator url="" class='tab_hd_item ' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          待付款
+        </navigator>
+        <navigator url="" class='tab_hd_item active' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          升级中
+        </navigator> -->
+        <navigator url="" class='tab_hd_item' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          已生成
+        </navigator>
+      </view>
+      <!-- 内容 -->
+      <view class='tab_bd'>
+        <!-- 最新发布 -->
+        <view class="ul">
+          <view class='li'>
+            <view class='li_hd'>
+              <view class='li_hd_hd'>
+                升级中
+              </view>
+              <view class='li_hd_bd'>
+                <image src='../../../images/my_order_time.png' mode='widthFix'></image>还剩08天21小时02分
+              </view>
+            </view>
+            <view class='li_bd'>
+              <view class='li_bd_hd'>
+                <image src='../../../images/discovery_index_img4.png'></image>
+              </view>
+              <view class='li_bd_bd'>
+                <view>升级名片差价
+                  <text>￥</text>
+                  <text class='num'>69</text>
+                </view>
+                <image src='../../../images/my_order_close.png' mode='widthFix'></image>
+              </view>
+              <view class='close'>
+                <image src='../../../images/my_order_close.png' mode='widthFix'></image>
+              </view>
+            </view>
+
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
