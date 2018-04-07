@@ -1,0 +1,18 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class='page_hd'>
+    <view class='section_tab clearfix'>
+      <navigator url='../notice_info/notice_info' hover-stay-time='{{navigator_time}}'  open-type='redirectTo'>
+        使用说明
+      </navigator>
+      <navigator url='../notice_enter/notice_enter' class='active' hover-stay-time='{{navigator_time}}'  open-type='redirectTo'>
+        入住公告
+      </navigator>
+    </view>
+
+    <view class='section_text'>
+      <view class='p'>
+        <text>{{enter?enter:"物流共享专注于物流货运行业,为广大物流同仁进行名片传播、相互交流！是发货找车、找专线，零担、整车，有车找货等需求提供方便快捷的平台。物流共享E平台基于微信数亿用户，为您的企业推广提供更好的选择，更好的宣传效果，更低的宣传成本。平台基于小程序的开发，无需下载、无需安装、随用随关，与其它相似的排他性物流平台毫无冲突，您可以安全放心的使用。现诚征全国各地代理商加盟，详情请咨询123456789"}}</text>
+      </view>
+    </view>
+  </view>
+</view>

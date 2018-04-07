@@ -1,0 +1,44 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <!-- tab选项卡 -->
+    <view class='section_tab style1'>
+      <view class='tab_hd'>
+        <navigator url="../interest/interest" class='tab_hd_item ' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          企业汇
+        </navigator>
+        <navigator url="../cards/cards" class='tab_hd_item active' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          名片夹
+        </navigator>
+      </view>
+    </view>
+   
+    <view class="weui-grids">
+  <navigator wx:for="{{cards1_list}}" url='' class="weui-grid js_grid">
+    <view class="weui-grid__icon">
+      <image src="{{item.person_img?item.person_img:'../../../images/test_header.png'}}" alt=""></image>
+    </view>
+    <p class="weui-grid__label">
+      {{item.company_name?item.company_name:"绿色建材"}}
+    </p>
+    <p class="weui-grid__label">
+     {{item.name?item.name:"王经理"}}
+    </p>
+  </navigator> 
+
+
+  <navigator wx:for="{{cards2_list}}" url='' class="weui-grid js_grid">
+    <view class="weui-grid__icon">
+      <image src="{{item.image?item.image:'../../../images/test_header.png'}}" alt=""></image>
+    </view>
+    <p class="weui-grid__label">
+      {{item.company_name?item.company_name:"绿色建材"}}
+    </p>
+    <p class="weui-grid__label">
+      {{item.name?item.name:"王经理"}}
+    </p>
+  </navigator>    
+  </view>
+
+
+  </view>
+</view>

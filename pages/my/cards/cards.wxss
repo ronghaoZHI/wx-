@@ -1,0 +1,17 @@
+.weui-grids{
+  border: none
+}
+.weui-grid {
+  border: none
+}
+.weui-grid__icon{
+  width: 130rpx;
+  height: 130rpx;
+  
+} 
+.weui-grid__icon image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%
+
+}

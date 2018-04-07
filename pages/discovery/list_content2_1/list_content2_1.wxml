@@ -1,0 +1,105 @@
+<view class="page info_card page_discovery" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+
+    <!-- 列表 -->
+    <view class='section_list'>
+      <view class='ul'>
+        <view class="li style5" hover-class="weui-cell_active" hover-stay-time='{{navigator_time}}'>
+          <image class='bg' src='../../../images/discovery_bg.png' mode='widthFix'></image>
+
+          <!-- 头部 -->
+          <view class='title'>
+            <view>
+              <view class='name'></view>
+            </view>
+          </view>
+
+          <!-- 文字 -->
+          <view class='text'>
+            <view class='weui-cell'>
+              <view class='weui-cell__hd'>
+                {{title?title:"吊车"}}
+              </view>
+              <view class='weui-cell__bd'>
+
+              </view>
+            </view>
+            <view class='weui-cell'>
+              <view class='weui-cell__hd'>
+                货量：
+              </view>
+              <view class='weui-cell__bd'>
+                {{volume?volume:"5吨"}}
+              </view>
+            </view>
+            <view class='weui-cell'>
+              <view class='weui-cell__hd'>
+                联系人：
+              </view>
+              <view class='weui-cell__bd'>
+                <text class='color'>{{person?person:"王师傅"}}</text>
+              </view>
+            </view>
+            <view class='weui-cell'>
+              <view class='weui-cell__hd'>
+                电话：
+              </view>
+              <view class='weui-cell__bd'>
+                {{phone?phone:"18500490966"}}
+              </view>
+            </view>
+            <view class='weui-cell'>
+              <view class='weui-cell__hd'>
+                地址：
+              </view>
+              <view class='weui-cell__bd'>
+                {{address?address:"北京市朝阳区大鲁店北路五环停车场"}}
+              </view>
+            </view>
+
+
+          </view>
+
+          <!-- 二维码 -->
+          <!-- <view class='ewm'>
+            <image src='../../../images/ewm.png' mode='widthFix'></image>
+            <text class='color'>查看更多</text>
+          </view> -->
+
+          <!-- 尾部 -->
+          <view class='footer'>
+            <!-- <view bindtap='bind_getlocation' data-name='{{address?address:"北京佳沂信达物流有限公司"}}' data-address='{{address?address:"北京市朝阳区大鲁店北路五环路停车场"}}'>
+              <image src='../../../images/discovery_list_content_footer1.png' mode='widthFix'></image>
+              <text>导航</text>
+            </view> -->
+            <view data-name='{{address?address:"北京佳沂信达物流有限公司"}}' data-address='{{address?address:"北京市朝阳区大鲁店北路五环路停车场"}}'>
+              <image src='../../../images/discovery_list_content_footer1.png' mode='widthFix'></image>
+              <text>导航</text>
+            </view>
+            <view bindtap='bind_phone' data-phone='{{phone?phone:"13888888888"}}'>
+              <image src='../../../images/discovery_list_content_footer2.png' mode='widthFix'></image>
+              <text>呼叫</text>
+            </view>
+            <view class='share_wrap'>
+              <image src='../../../images/discovery_list_content_footer3.png' mode='widthFix'></image>
+              <text>分享</text>
+              <button open-type="share">分享</button>
+            </view>
+            <!-- <view class='{{love?"active":""}}' bindtap='bind_love'>
+              <image src='{{love?"../../../images/discovery_list_content_footer4_1.png":"../../../images/discovery_list_content_footer4_0.png"}}' mode='widthFix'></image>
+              <text>收藏</text>
+            </view> -->
+          </view>
+        </view>
+
+      </view>
+    </view>
+
+    <!-- 发布 -->
+    <navigator class='scrollTop' hover-stay-time='{{navigator_time}}'>
+      <image src='../../../images/discovery.png' mode='widthFix'></image>
+    </navigator>
+
+
+  </view>
+</view>

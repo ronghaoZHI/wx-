@@ -1,0 +1,41 @@
+<view class="page page_discovery" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <!-- 选项卡 -->
+    <view class='section_tab style1'>
+      <!-- 头部 -->
+      <view class='tab_hd'>
+        <navigator url="../info_publish/info_publish" class='tab_hd_item ' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          发布的信息
+        </navigator>
+        <navigator url="../info_collect/info_collect" class='tab_hd_item' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          收藏的信息
+        </navigator>
+        <!-- <navigator url="" class='tab_hd_item active' hover-class='none' hover-stay-time='{{navigator_time}}'>
+          谁对我感兴趣
+        </navigator> -->
+      </view>
+      <!-- 内容 -->
+      <view class='tab_bd'>      
+        <view class='section_interest'>
+          <navigator  wx:for="{{list}}" url="" class='item' open-type='redirectTo' hover-class='none' hover-stay-time='{{navigator_time}}'>
+            <image src='../../../images/test_header.png'></image>
+            <text>富华钢结构
+            李先生</text>
+          </navigator>
+           <navigator url="" class='item' open-type='redirectTo' hover-class='none' hover-stay-time='{{navigator_time}}'>
+            <image src='../../../images/test_header.png'></image>
+            <text>绿色建材
+            王经理</text>
+          </navigator>
+          <navigator url="" class='item' open-type='redirectTo' hover-class='none' hover-stay-time='{{navigator_time}}'>
+            <image src='../../../images/test_header.png'></image>
+            <text>中国铜材
+            王经理</text> 
+          </navigator>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+</view>

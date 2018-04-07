@@ -1,0 +1,83 @@
+<view class="page page_discovery" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+
+    <!-- 选项卡 -->
+    <view class='section_tab'>
+
+      <!-- 内容 -->
+      <view class='tab_bd'>
+        <!-- 最新发布 -->
+        <view class='ul'>
+          <view class='li'>
+            <view class='li_hd'>
+              <view class='li_hd_hd'>
+                <image src='../../../images/discovery_index_img4.png' mode='widthFix'></image>
+              </view>
+              <view class='li_hd_bd'>
+                <view class='name'>
+                  {{pub.person || "农夫三胖"}}
+                </view>
+                <view class='other'>
+                  <image src='../../../images/discovery_index_address.png' mode='widthFix'></image>{{pub.address || "北京市昌平区天通苑"}}
+
+                </view>
+              </view>
+              <view class='li_hd_ft'>
+                <view>
+                  <text>{{pub.addtime ||"2017-11-09"}}</text>
+                  <text class='top'>置顶</text>
+                </view>
+                <view>
+                  <!-- 离您<text>9.5</text>km -->
+                </view>
+              </view>
+            </view>
+            <view class='li_bd'>
+              <view class='text'>
+                <text class='title'>{{pub.content ||"货车节油，动力提升20%，油耗降低18%"}}</text>
+              </view>
+              <view class='img row'>
+              <!-- wx:for="{{pub.photo}}" -->
+                <view  class='col-12'>
+                  <image wx:if="{{pub.photo}}" src='{{pub.photo||"../../../images/discovery_index_img5.png" }}' mode='widthFix'></image>
+                </view>
+                <!-- <view class='col-12'>
+                  <image src='../../../images/discovery_index_img5.png' mode='widthFix'></image>
+                </view>
+                <view class='col-12'>
+                  <image src='../../../images/discovery_index_img5.png' mode='widthFix'></image>
+                </view>
+                <view class='col-12'>
+                  <image src='../../../images/discovery_index_img5.png' mode='widthFix'></image>
+                </view> -->
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+    <!-- 添加 -->
+    <navigator class='scrollTop' hover-stay-time='{{navigator_time}}'>
+      <image src='../../../images/discovery.png' mode='widthFix'></image>
+    </navigator>
+
+    <view class='footer'>
+      <view class='active'>
+        <image src='../../../images/discovery_content_love1.png'  mode='widthFix'></image>
+        <text>收藏</text>
+      </view>
+      <view>
+        <image src='../../../images/discovery_content_report.png'  mode='widthFix'></image>
+        <text>举报</text>
+      </view>
+      <view>
+        <text>导航</text>
+      </view>
+      <view bindtap='bindPhone' data-phone='13888888888'>
+        <text>联系</text>
+      </view>
+    </view>
+  </view>
+</view>

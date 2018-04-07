@@ -1,0 +1,19 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class='page_hd'>
+    <view class='section_tab clearfix'>
+      <navigator url='../notice_info/notice_info' class='active' hover-stay-time='{{navigator_time}}'  open-type='redirectTo'>
+        使用说明
+      </navigator>
+      <navigator url='../notice_enter/notice_enter' hover-stay-time='{{navigator_time}}'  open-type='redirectTo'>
+        入住公告
+      </navigator>
+    </view> 
+
+    <view class='section_text'>
+      <view class='p'>
+        <text class='color'>使用技巧：</text>
+        <text>{{explain?explain:"使用技巧：在微信--发现--小程序里搜索“物流共享E平台”，向右划小程序图标可以加星标，也可以在打开“物流共享E平台”时，找到右上角三个小点，点击选择“显示在聊天顶部”；其他手机可以选择“显示在桌面”，桌面上生成一个“物流共享E平台”图标，像APP一样方便使用！1、收到的名片，可以收藏，收藏到您的“物流共享”名片夹里。2、名片夹的名片可以添加您自己专用的备注，并可以直接搜索备注。3、您可以制作属于您自己的专属名片，及时申请认证，可以更全面的展示您的公司，增加可信度。"}}</text>
+      </view>        
+    </view>
+  </view>
+</view>

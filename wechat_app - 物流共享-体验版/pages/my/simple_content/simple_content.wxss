@@ -1,7 +1,0 @@
-@import '../../e-card/update_content/update_content';
-page{
-  overflow-y: hidden;
-}
-
-
-

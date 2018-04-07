@@ -1,0 +1,30 @@
+<!--pages/publish/car-list/car-list.wxml-->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class='section_enter'>
+      <view class="weui-cells weui-cells_after-title">      
+        <navigator wx:for="{{new_list}}" wx:key ="1" url="../car-content/car-content" class="weui-cell weui-cell_access" hover-class="weui-cell_active" hover-stay-time="{{navigator_time}}" bindtap='set_car_id' data-car-id="{{item.id}}">
+          <view class="weui-cell__hd">
+            <image src="../../../images/wuliu_01.jpg" ></image>
+          </view>
+          <view class="weui-cell__bd">
+            <view class='name ellipsis-1'>
+              <text> {{item.from? item.from :"北京"}}</text>--
+              <text> {{item.to? item.to :"天津"}}</text>
+            </view>
+            <view class='address ellipsis-1'>地址：
+              <text>{{item.address? item.address :"北京市昌平区天通苑"}}</text>
+            </view>
+          </view>
+          <view class="weui-cell__ft">
+            {{item.addtime ? item.addtime :"下午5:25"}}
+          </view>
+        </navigator>       
+      </view>
+    </view>
+    <!-- 置顶 -->
+    <view class='scrollTop'>
+      <image src='../../../images/publish.png' mode='widthFix'></image>
+    </view>
+  </view>
+</view>
